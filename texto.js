@@ -1,172 +1,7 @@
-class antecedente
-{
-    constructor(nome, descricao, pericias, idiomas, equipamentos, caracteristica, caracteristicasugerida, personalidades, ideais, vínculos, fraquezas) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.pericias = pericias;
-        this.idiomas = idiomas;
-        this.equipamentos = equipamentos;
-        this.caracteristica = caracteristica;
-        this.caracteristicasugerida = caracteristicasugerida;
-        this.personalidades = personalidades;
-        this.ideais = ideais;
-        this.vínculos = vínculos;
-        this.fraquezas = fraquezas;
-      }
-}
-
-let antecedentes = [];
-
-
-
-let personalidades;
-let ideais;
-let vinculos;
-let fraquesas;
-
-antecedentes.push()
-var antecedente = new antecedente(
-    'EREMITA',
-    ['Você viveu em reclusão – ou em uma comunidade protegida como um mosteiro, ou totalmente sozinho – por uma parte importante de sua vida.
-    Durante seu tempo afastado do clamor da sociedade, você encontrou silêncio, solidão e talvez algumas das respostas que você procurava.
-    Proficiências em Perícias	Medicina, Religião Proficiências em Ferramentas: kit de herbalismo
-    Idiomas	 Um à sua escolha
-    Equipamento	 Um porta pergaminho recheado de notas de seus estudos ou preces, um cobertor de inverno, um conjunto de roupas comuns, um kit de herbalismo e 5 po.
-    VIDA DE RECLUSÃO Qual foi a razão do seu isolamento e o que mudou para permitir que você acabasse com a vida na solidão? Você pode conversar com seu Mestre para determinar a exata natureza de sua reclusão, ou você pode escolher ou jogar na tabela abaixo para determinar a razão por trás de sua reclusão.
-    d8 Vida de Reclusão 1 Eu estava a procura de iluminação espiritual.
-    2 Eu estava participando da vida em comunidade de acordo com os ditames da ordem religiosa.
-    3 Eu estava exilado por um crime que não cometi.
-    4 Eu me retirei da sociedade depois que um evento alterou a minha vida.
-    5 Eu precisava de um lugar tranquilo para trabalhar em minha arte, literatura, música ou manifesto.
-    6 Eu precisava comungar com a natureza, longe da civilização.
-    7 Eu era o protetor de uma antiga ruína ou relíquia.
-    8 Eu era um peregrino em busca de uma pessoa, lugar ou relíquia de significado espiritual.
-    
-    CARACTERÍSTICA	 DESCOBERTA A reclusão tranquila de seu exílio estendido deu a você acesso a uma descoberta única e poderosa.
-    A exata natureza dessa revelação depende da natureza de sua reclusão.
-    Pode ser uma grande verdade sobre o cosmos, os deuses, os poderosos seres dos planos exteriores, ou as forças da natureza.
-    Pode ser uma situação que ninguém tenha visto antes.
-    Você pode ter descoberto um fato há muito tempo esquecido, ou desenterrado uma relíquia do passado que poderia reescrever a história.
-    Pode ser uma informação que seria prejudicial às pessoas que levaram você ao exílio, e daí a razão do seu retorno à sociedade.
-    Converse com seu Mestre para determinar os detalhes da sua descoberta e seu impacto na campanha.
-    
-    CARACTERÍSTICAS SUGERIDAS	Alguns eremitas estão bem adaptados a uma vida de reclusão, enquanto outros se irritam contra ela e anseiam por companhia.
-    Mesmo que eles abracem a solidão ou anseiem escapar dela, a vida solitária molda suas atitudes e ideais.
-    Alguns são levemente levados à loucura por seus anos a parte da sociedade.
-    d8 Traço de Personalidade
-     1 Eu estive isolado por tanto tempo que raramente falo, preferindo gestos e grunhidos ocasionais.
-    2 Eu sou absolutamente sereno, mesmo em face ao desastre.
-    3 O líder da minha comunidade tinha algo sábio a dizer sobre cada tópico, e eu estou ansioso para compartilhar essa sabedoria.
-    4 Eu sinto uma enorme empatia pelos que sofrem.
-    5 Eu sou alheio à etiqueta e expectativas sociais.
-    6 Eu conecto tudo o que me acontece a um grande plano cósmico.
-    7 Eu muitas vezes me perco em meus próprios pensamentos e contemplação, tornando-me alheio ao que me cerca.
-    8 Eu estou trabalhando em uma grande teoria filosófica e amo compartilhar minhas ideias.
-     
-    d6 Ideal
-    1 Bem Maior.
-    Meus dons são feitos para serem compartilhados com todos, não para serem usados em meu próprio benefício. (Bom)
-     2 Lógica.
-    Emoções não devem nublar nossos sentidos do que é certo e verdadeiro, ou o nosso pensamento lógico.(Leal)
-     3 Pensamento Livre.
-    Questionamento e curiosidade são os pilares do progresso. (Caótico)
-     4 Poder.
-    Solidão e contemplação são caminhos que levam ao poder místico ou mágico. (Mau)
-     5 Viva e Deixe Viver.
-    Se intrometer nos assuntos dos outros só traz problema. (Neutro)
-     6 Autoconhecimento.
-    Se você conhece a si mesmo, não há mais nada para conhecer. (Qualquer)
-      
-    d6 Vínculo
-    1 Nada é mais importante do que os outros membros do meu convento, ordem ou associação.
-    2 Eu entrei em reclusão para me esconder daqueles que podem ainda estar me caçando.
-    Devo um dia enfrentá-los.
-    3 Eu ainda estou procurando a iluminação que eu persegui em minha reclusão, e eu ainda não encontrei.
-    4 Eu entrei em reclusão porque amei alguém que não poderia ter.
-    5 Se a minha descoberta for revelada, ela poderá trazer ruína ao mundo.
-    6 Meu isolamento me deu grande saber sobre um grande mal que somente eu posso destruir.
-    
-    d6 Fraquezas
-    1 Agora que eu retornei ao mundo, eu aproveito um pouco mais os seus prazeres.
-    2 Eu abrigo pensamentos sombrios e sanguinários que o isolamento e meditação não conseguiram conter.
-    3 Eu sou dogmático em meus pensamentos e filosofia.
-    4 Eu deixo minha necessidade de vencer argumentos ofuscar amizades e harmonia.
-    5 Eu arrisco muito para descobrir um pedacinho do conhecimento perdido.
-    6 Eu gosto de guardar segredos e não os compartilho com ninguém.
     OUTROS EREMITAS O antecedente Eremita assume um tipo contemplativo de reclusão que permite espaço para estudo e prece.
     Se você quiser jogar com alguém que passou sua reclusão em uma região selvagem evitando a companhia de outras pessoas, veja o antecedente Forasteiro.
     Por outro lado, se você procura um caminho mais religioso, o Acólito pode ser o que você esteja procurando.
     Ou você pode até ser um Charlatão, se passando por uma pessoa sábia e santa e deixando tolos piedosos ajudá-lo.
-    
-
-
-
-
-    'ARTESÃO DE GUILDA',
-    'Você é membro de uma guilda de artesãos, hábil em um ofício específico e com uma relação bem próximo com outros artesãos. Você é uma parte bem consolidada do mundo mercantil, liberto pelo talento e riqueza de uma ordem social feudal repressora. Você aprendeu suas habilidades como um aprendiz de um mestre artesão, sob o patrocínio de sua guilda, até se tornar um mestre por direito.',
-    ['Intuição', 'Persuasão'],
-    'Um à sua escolha',
-    'Um conjunto de ferramentas de artesão (à sua escolha), uma carta de apresentação da sua guilda, um conjunto de trajes de viajante e uma algibeira contendo 15 po.',
-'NEGÓCIO DA GUILDA<br>
-Guildas são geralmente encontradas em cidades grandes cidades o bastante para apoiar vários artesãos que praticam o mesmo ofício. Entretanto, sua guilda pode ser uma rede de artesãos livres, onde cada um trabalha em uma aldeia diferente dentro de um reino maior. Converse com seu Mestre para determinar a natureza de sua guilda. Você pode selecionar os negócios da sua guilda da tabela Negócios da Guilda ou jogar aleatoriamente. Como membro da sua guilda, você conhece as habilidades necessárias para criar itens acabados a partir das matérias primas (refletida na sua proficiência com um certo tipo de ferramentas de artesão), bem como os princípios do comércio e práticas de bons negócios. A questão agora é saber se você abandonou o seu comércio por aventura ou assumiu o esforço de se aventurar e comercializar ao mesmo tempo.<br>
-MEMBRO DE GUILDA Como um membro consolidado e respeitado da guilda, você pode contar com alguns benefícios. Seus companheiros membros da guilda fornecerão a você hospedagem e alimentação se necessário, e pagarão por seu funeral se precisar. Em algumas vilas e cidades, o salão da guilda é um posto central para encontrar outros membros de sua profissão, e pode ser um bom lugar para encontrar consumidores potenciais, aliados ou prestadores de serviços.<br>
-<br>
-d20 Negócio da Guilda 
-1 Alquimistas e boticários 
-2 Armeiros, chaveiros e refinadores 
-3 Calígrafos, escribas e escrivães 
-4 Carpinteiros, instaladores de telhados e rebocadores 
-5 Carpinteiros navais e construtores de velas para navios 
-6 Cartógrafos, topógrafos e gráficos 
-7 Ceramistas e oleiros 
-8 Cervejeiros, destiladores e vinicultores 
-9 Coureiros, esfoladores e curtidores de couro 
-10 Cozinheiros e padeiros 
-11 Entalhadores, tanoeiros, e fabricantes de arcos 
-12 Fabricantes de carroças e fabricantes de rodas 
-13 Fabricantes de vidro e vidraceiros 
-14 Ferreiros e forjadores de metal 
-15 Funileiros, latoeiros e folheiros 
-16 Joalheiros e ourives 
-17 Pedreiros e cortadores de pedras 
-18 Pintores, decoradores e letristas 
-19 Sapateiros 
-20 Tecelões e tintureiros As guildas muitas vezes exercem um enorme poder político<br>
-Se você for acusado de um crime, sua guilda irá apoiá-lo se houver um bom motivo para provar sua inocência ou se seu crime for justificável. Você também pode ter acesso a poderosas figuras políticas através da guilda, se você for um membro com boas posições. Tais ligações podem requerer doações de dinheiro ou itens mágicos para os cofres da guilda. Você deve pagar a quota de 5 po por mês para a guilda. Se você esquecer o pagamento, você deve repor o valor da dívida para permanecer nas boas graças da guilda.'
-'Artesãos de guilda estão entre as pessoas mais comuns do mundo – até aposentarem suas ferramentas e assumirem uma carreira de aventuras. Eles entendem o valor do trabalho duro e da importância da comunidade, mas são vulneráveis aos pecados da ganância e da cobiça.'
-['Eu acredito que tudo que for feito, deve ser bem feito. Não vou negar – sou perfeccionista.',
-'Eu sou esnobe e menosprezo aqueles que não sabem apreciar uma boa arte.',
-'Eu sempre quero saber como as coisas funcionam e o que motiva as pessoas.',
-'Eu sou cheio de aforismos e tenho um provérbio para cada ocasião.',
-'Eu sou rude com pessoas que não tem compromisso com o trabalho duro e honesto.',
-'Eu gosto conversar muito sobre a minha profissão.',
-'Eu não me separo do meu dinheiro facilmente e irei pechinchar incansavelmente para conseguir o melhor negócio possível.',
-'Eu sou bem conhecido pelo meu trabalho e quero ter certeza que todo mundo o aprecia. Eu fico desconcertado quando as pessoas não ouviram falar de mim',
-],
-[
-'Comunidade. É dever de todos os povos civilizados fortalecer os laços da comunidade e a segurança da civilização.(Leal)',
-'Generosidade. Meus talentos foram dados a mim para que eu pudesse usá-los em benefício do mundo. (Bom)',
-'Liberdade. Todos devem ser livres para buscar o seu próprio sustento. (Caótico)',
-'Ganância. Eu estou nisso somente pelo dinheiro. (Mau)',
-'Povo. Eu sou comprometido com as pessoas que eu me preocupo, não com ideais. (Neutro)',
-'Aspiração. Esforço-me para ser o melhor no meu trabalho.',
-],
-[
-'A loja onde eu aprendi meu ofício é o lugar mais importante do mundo para mim.',
-'Eu fiz um grande trabalho para alguém, e então o achei indigno de recebê-lo. Ainda procuro por alguém digno.',
-'Devo muito à minha guilda por me forjar em quem sou hoje.',
-'Eu busco riqueza para conseguir o amor de alguém.',
-'Um dia eu retornarei a minha guilda e provarei que sou o melhor artesão de todos.',
-'Eu irei me vingar das forças malignas que destruíram meu local de trabalho e arruinaram a minha vida.',
-],
-[
-'Eu faço qualquer coisa para por as mãos em algo raro ou inestimável.',
-'Sou rápido em perceber que alguém está tentando me trapacear.',
-'Ninguém deve saber que um dia eu roubei dinheiro dos cofres da guilda.',
-'Eu nunca estou satisfeito com o que tenho – eu sempre quero mais.',
-'Eu mataria para adquirir um titulo de nobreza.',
-'Eu tenho ciúmes terríveis de qualquer pessoa que possa ofuscar minha obra. Aonde quer que eu vá, estou cercado de rivais.'
-]
 
 VARIANTE DE ARTESÃO DE GUILDA: MERCADOR DE GUILDA Em vez de uma guilda de artesãos, você pode pertencer a uma guilda de comerciantes, mestres de caravanas ou lojistas.
 Você não cria itens, mas ganha a vida através da compra e venda dos trabalhos dos outros (ou das matérias-primas que os artesãos precisam para o ofício).
@@ -175,7 +10,13 @@ Talvez você transporte mercadorias de um lugar para outro de navio, carroças o
 De certa forma, a vida de um comerciante viajante presta-se a aventura muito mais do que a vida de um artesão.
 Em vez de proficiência com ferramentas de artesão, você pode ser proficiente com ferramentas de navegação ou um idioma adicional.
 E em vez das ferramentas de artesão, você pode começar com uma mula e uma carroça.
- 
+
+
+VARIANTE DE ARTISTA: GLADIADOR Um gladiador é um artista tanto quanto um menestrel ou artista de circo, treinado para transformar as artes do combate em um espetáculo para a multidão desfrutar.
+Esse tipo de combate chamativo é a sua rotina de artista, embora você possa ter também algumas habilidades como um acrobata ou ator.
+Usando sua característica Por Demanda Popular, você pode achar um lugar que oferece entretenimento de combate – talvez uma arena de gladiadores ou um clube de luta secreto.
+Você pode substituir o instrumento musical no seu equipamento, por uma arma barata incomum, como uma rede ou tridente.
+
 //nome 0
 //descricao 1
 //pericias 2 
@@ -184,145 +25,14 @@ E em vez das ferramentas de artesão, você pode começar com uma mula e uma car
 //caracteristica 5
 //caracteristicasugerida 6
 
-'ARTISTA',
-'Você se sobressai em frente a uma plateia. Você sabe como arrebatá-los, entretê-los e até inspirá-los. Suas poesias podem agitar os corações daqueles que o ouvem, despertar tristeza ou alegria, riso ou fúria. Sua música levanta seus espíritos ou capta sua tristeza. Seus passos de dança cativam, seu humor ofende. Qualquer que seja a técnica que você usa, sua arte é sua vida.',
-'Acrobacia, Atuação Proficiências em Ferramentas: kit de disfarce, um tipo de instrumento musical',
+
+antecedentes.push(new antecedente(
+'CRIMINOSO',
+'Você é um criminoso experiente com um histórico de contravenções. Você gastou um bom tempo entre outros criminosos e ainda mantém contato com eles e com o submundo do crime. Você está mais perto do que a maioria do submundo do assassinato, roubo e violência que prevalece no ventre da sociedade, e você sobreviveu até esse ponto desprezando a lei e os regulamentos da sociedade.',
+['Enganação', 'Furtividade', 'Ferramentas: Um tipo de kit de jogo, ferramentas de ladrão'],
 '',
-'Um instrumento musical (à sua escolha), um item de um admirador(a) (carta de amor, mecha de cabelo ou bugiganga) e uma algibeira contendo 15 po.',
-'ROTINAS DO ARTISTA Um bom artista é versátil, apimentando cada apresentação com uma variedade de rotinas diferentes.<br>'+
-'Escolha entre uma e três rotinas ou jogue na tabela abaixo para definir sua experiência como artista..<br>'+
-'Rotina do Artista d10.<br>'+
-'1 Acrobata .<br>'+
-'2 Ator .<br>'+
-'3 Bobo da Corte .<br>'+
-'4 Cantor .<br>'+
-'5 Contador de Histórias .<br>'+
-'6 Dançarino .<br>'+
-'7 Engolidor de Fogo .<br>'+
-'8 Instrumentista .<br>'+
-'9 Malabarista .<br>'+
-'10 Poeta .<br>'+
-'PELA DEMANDA POPULAR Você pode sempre encontrar um lugar para se apresentar, geralmente em uma estalagem ou taverna, mas possivelmente em um circo, um teatro, ou mesmo em uma corte nobre. Em qualquer lugar, você recebe hospedagem e comida sem custo, em um padrão modesto ou confortável (dependendo da qualidade do estabelecimento), enquanto estiver se apresentando a cada noite. Além disso, sua atuação o torna uma espécie de figura local. Quando estranhos o reconhecem em uma cidade onde você se apresentou, eles normalmente começam a gostar de você.',
-'Artistas de sucesso têm que ser capaz de capturar e prender a atenção do público, então eles tendem a ter personalidades extravagantes ou contundentes. Eles são inclinados para o romantismo e muitas vezes se apegam aos ideais de mentes elevadas sobre a prática da arte e da apreciação da beleza.',
-[
-'Eu conheço uma história relevante para quase todas as situações.',
-'Sempre que venho a um lugar novo, coleciono rumores locais e espalho boatos.',
-'Eu sou um romântico incurável, sempre procurando por "alguém especial".',
-'Ninguém fica com raiva de mim ou ao meu redor por muito tempo, já que eu posso acalmar os ânimos.',
-'Eu adoro um bom insulto, mesmo um insulto que é dirigido a mim.',
-'Eu fico amargo quando não sou o centro das atenções.',
-'Eu não me contentarei com nada menos do que a perfeição.',
-'Eu mudo meu humor ou de ideia tão rápido quanto mudo uma nota em uma canção.',
-],
- 
-d6 Ideal
-1 Beleza.
-Quando eu atuo, eu faço o mundo ser melhor. (Bom)
- 2 Tradição.
-As histórias, lendas e canções do passado nunca serão esquecidas, pois elas nos ensinam a ser quem somos.(Leal)
- 3 Criatividade.
-O mundo está necessitado de novas ideias e ações ousadas. (Caótico)
- 4 Ganância.
-Eu estou nisso somente pelo dinheiro e pela fama. (Mau)
- 5 Povo.
-Eu gosto de ver sorrisos nos rostos das pessoas quando atuo.
-Isso é tudo o que importa. (Neutro)
- 6 Honestidade.
-A arte deve refletir a alma.
-Ela deve vir de dentro e revelar quem realmente somos. (Qualquer)
-  
-d6 Vínculo
-1 Meu instrumento é o meu bem mais precioso e ele me lembra de alguém que eu amo.
-2 Alguém roubou meu precioso instrumento e algum dia vou recuperá-lo.
-3 Eu quero ser famoso, custe o que custar.
-4 Eu idolatro um herói de lendas antigas e avalio meus atos pelos dessa pessoa.
-5 Eu farei qualquer coisa para provar minha superioridade sobre meu odiado rival.
-6 Eu farei qualquer coisa pelos outros membros da minha velha trupe.
-
-d6 Fraquezas
-1 Eu farei qualquer coisa para ganhar fama e renome.
-2 Sou um otário quando o assunto é um rosto bonito.
-3 Um escândalo sempre me impede de voltar para casa.
-Esse tipo de problema parece me perseguir.
-4 Uma vez eu satirizei um nobre que ainda quer minha cabeça.
-Foi um erro que provavelmente vai se repetir.
-5 Eu tenho problemas para manter meus sentimentos verdadeiros ocultos.
-Minha língua afiada me mete em problemas.
-6 Apesar dos meus melhores esforços, eu não sou confiável para os meus amigos.
-VARIANTE DE ARTISTA: GLADIADOR Um gladiador é um artista tanto quanto um menestrel ou artista de circo, treinado para transformar as artes do combate em um espetáculo para a multidão desfrutar.
-Esse tipo de combate chamativo é a sua rotina de artista, embora você possa ter também algumas habilidades como um acrobata ou ator.
-Usando sua característica Por Demanda Popular, você pode achar um lugar que oferece entretenimento de combate – talvez uma arena de gladiadores ou um clube de luta secreto.
-Você pode substituir o instrumento musical no seu equipamento, por uma arma barata incomum, como uma rede ou tridente.
-
-
-
-CHARLATÃO 
-Você sempre soube lidar com pessoas.
-Você sabe aquilo que os toca, você pode trazer à tona os desejos de seus corações após alguns minutos de conversa, e com algumas perguntas-chave você pode lê-los como se fossem livros infantis.
-É um talento útil e que você está perfeitamente disposto a usar para sua vantagem.
-Você sabe o que as pessoas querem e você entrega, ou melhor, você promete entregar.
-O bom senso diz às pessoas para ficar longe das coisas que parecem boas demais para ser verdade, mas esse bom senso parece estar em falta quando você está por perto.
-A garrafa com líquido rosa certamente vai curar esse furúnculo inconveniente, esta pomada – nada mais do que um pouco de gordura com uma pitada de pó de prata – pode restaurar a juventude e o vigor, e há uma ponte na cidade que, de repente, está à venda.
-Essas maravilhas soam improváveis, mas você as faz soar como um negócio real.
-Perícias	Enganação, Prestidigitação Ferramentas: kit de disfarce, kit de falsificação
-Equipamento	 Um conjunto de roupas finas, um kit de disfarce, ferramentas para enganação à sua escolha (dez garrafas com líquidos coloridos fechadas com rolha, um conjunto de dados viciados, um baralho de cartas marcadas ou um anel de sinete de um duque imaginário) e uma algibeira contendo 15 po ESQUEMAS FAVORITOS Cada charlatão tem um esquema preferido.
-Escolha uma farsa favorita ou jogue na tabela abaixo.
-
-d6 Esquema 
-1 Eu trapaceio em jogos de azar.
-2 Eu raspo moedas ou forjo documentos.
-3 Eu entro na vida dos outros para atacar suas fraquezas e roubar suas fortunas.
-4 Eu uso novas identidades, como roupas.
-5 Eu faço jogos de prestidigitação nas esquinas da cidade.
-6 Eu convenço as pessoas que qualquer lixo inútil é mais valioso que seu dinheiro suado.
-
-CARACTERÍSTICA	 IDENTIDADE FALSA Você criou uma segunda identidade que inclui documentos, conhecimentos estabelecidos e disfarces que permitem você assumir a vida dessa pessoa. Além disso, você pode forjar documentos como papéis oficiais e cartas pessoais, desde que você tenha visto um exemplar deste tipo de documento ou a caligrafia que você está tentando copiar.
-CARACTERÍSTICAS SUGERIDAS	Charlatães são personagens pitorescos que escondem seu eu verdadeiro atrás das máscaras que constroem. Eles refletem o que as pessoas querem ver, o que elas querem acreditar e como elas veem o mundo. Mas o seu verdadeiro ser é, muitas vezes, atormentados por uma consciência inquieta, um velho inimigo, ou problemas profundos de confiança.
-
-d8 Traço de Personalidade
-1 Eu me apaixono e desapaixono facilmente, e estou sempre buscando alguém.
-2 Eu tenho uma piada para cada ocasião, especialmente ocasiões onde o humor é inapropriado.
-3 Elogiar é o meu truque preferido para conseguir o que eu quero.
-4 Eu sou um jogador nato que não consegue resistir a se arriscar por uma recompensa em potencial.
-5 Eu minto sobre quase tudo, mesmo quando não há uma boa razão para isso.
-6 Sarcasmo e insultos são as armas que escolho.
-7 Eu possuo vários símbolos sagrados e invoco qualquer divindade que venha a ser útil em algum momento.
-8 Eu embolso qualquer coisa que eu vejo que pode ter algum valor.
- 
-d6 Ideal
-1 Independência. Eu sou um espirito livre – ninguém me diz o que fazer. (Caótico)
-2 Equidade. Eu nunca tenho como alvo pessoas que não podem perder algumas moedas.(Leal)
-3 Caridade. Eu distribuo o dinheiro que adquiri com pessoas que realmente precisam. (Bom)
-4 Criatividade. Eu nunca uso o mesmo golpe duas vezes. (Caótico)
-5 Amizade. Bens materiais vêm e vão. Laços de amizades duram para sempre. (Bom)
-6 Aspiração. Eu sou determinado a me tornar alguém melhor. (Qualquer)  
-
-d6 Vínculo
-1 Eu enganei a pessoa errada e tenho que trabalhar para que essa pessoa nunca cruze o meu caminho ou o caminho daqueles que eu me preocupo.
-2 Eu devo tudo ao meu mentor – uma pessoa horrível que provavelmente está apodrecendo em uma prisão qualquer.
-3 Em algum lugar, eu tenho um filho que não me conhece.Eu estou tornando o mundo melhor para ele ou ela.
-4 Eu venho de uma família nobre, e um dia eu vou recuperar minhas terras e meu titulo daqueles que os roubaram de mim.
-5 Uma pessoa poderosa matou alguém que eu amo. Um dia, em breve, terei minha vingança.
-6 Eu enganei e arruinei uma pessoa que não merecia. Eu busco reparar meus erros, mas nunca serei capaz de me perdoar.
-
-d6 Fraquezas 
-1 Eu não resisto a um rosto bonito.
-2 Eu estou sempre endividado. Eu gasto meu dinheiro ilícito em luxúria decadente mais rápido do que eu consigo obter.
-3 Eu estou convencido de que ninguém pode me enganar da mesma maneira que eu engano os outros.
-4 Sou muito ganancioso para o meu próprio bem. Não resisto em correr riscos quando há dinheiro envolvido.
-5 Eu não resisto em golpear pessoas mais poderosas do que eu.
-6 Eu odeio admitir e odiarei a mim mesmo por isso, mas eu vou correr para proteger minha pele se as coisas ficarem difíceis.
-
-
-
-CRIMINOSO 
-Você é um criminoso experiente com um histórico de contravenções.
-Você gastou um bom tempo entre outros criminosos e ainda mantém contato com eles e com o submundo do crime.
-Você está mais perto do que a maioria do submundo do assassinato, roubo e violência que prevalece no ventre da sociedade, e você sobreviveu até esse ponto desprezando a lei e os regulamentos da sociedade.
-Perícias	Enganação, Furtividade Ferramentas: Um tipo de kit de jogo, ferramentas de ladrão
-Equipamento	 Um pé de cabra, um conjunto de roupas escuras comuns com capuz e uma algibeira contendo 15 po ESPECIALIDADE CRIMINOSA Existem vários tipos de criminosos, e dentro de uma guilda de ladrões ou outra organização criminosa, cada membro possui sua especialidade.
-Mesmo os criminosos que operam fora de tais organizações têm fortes preferências por certos tipos de crimes sobre os outros.
-Escolha um papel que você assumiu durante sua vida como criminoso, ou jogue na tabela abaixo.
+['Um pé de cabra', 'um conjunto de roupas escuras comuns com capuz','uma algibeira contendo 15 po'],
+'CRIMINOSA Existem vários tipos de criminosos, e dentro de uma guilda de ladrões ou outra organização criminosa, cada membro possui sua especialidade. Mesmo os criminosos que operam fora de tais organizações têm fortes preferências por certos tipos de crimes sobre os outros. Escolha um papel que você assumiu durante sua vida como criminoso, ou jogue na tabela abaixo.
 d8 Especialidade d8 Especialidade 1 Chantagista 5 Ladrão de Estrada 2 Assaltante 6 Assassino de Aluguel 3 Executor 7 Batedor de Carteiras 4 Receptador 8 Contrabandista 
 CARACTERÍSTICA	 CONTATO CRIMINAL Você possui contatos de confiança que agem como seus informantes em uma rede criminosa.
 Você sabe como se comunicar com eles mesmo em grandes distâncias.
@@ -375,6 +85,9 @@ Se eu não esquecê-lo, vou ignorá-lo.
 5 Eu viro as costas e corro quando as coisas começam a ficar ruins.
 6 Um inocente foi preso por um crime que eu cometi.
 Por mim tudo bem.
+
+));
+antecedentes.push(new antecedente(
 
 
 
@@ -450,6 +163,8 @@ Se você quiser jogar com alguém que passou sua reclusão em uma região selvag
 Por outro lado, se você procura um caminho mais religioso, o Acólito pode ser o que você esteja procurando.
 Ou você pode até ser um Charlatão, se passando por uma pessoa sábia e santa e deixando tolos piedosos ajudá-lo.
 
+));
+antecedentes.push(new antecedente(
 
 
 FORASTEIRO 
@@ -506,6 +221,8 @@ d6 Fraquezas
 6 Não espere que eu salve aqueles que não podem se salvar.
 É o caminho da natureza que o mais forte prospere e o mais fraco pereça.
 
+));
+antecedentes.push(new antecedente(
 
 
 HERÓI DO POVO 
@@ -572,6 +289,8 @@ d6 Fraqueza
 5 Secretamente, eu acredito que as coisas estariam melhores se algum tirano comandasse a região.
 6 Eu tenho dificuldades em confiar em meus aliados.
 
+));
+antecedentes.push(new antecedente(
 
 
 MARINHEIRO 
@@ -637,6 +356,8 @@ CARACTERÍSTICA VARIADA: MÁ REPUTAÇÃO Se o seu personagem tem o antecedente M
 Não importa aonde você vá, as pessoas tem medo de você devido a sua reputação.
 Quando você estiver em um estabelecimento civilizado você consegue escapar de crimes menores como recusarse a pagar comida em uma taverna ou derrubar as portas de uma loja local, uma vez que a maioria das pessoas não irá relatar sua atividade para as autoridades.
 
+));
+antecedentes.push(new antecedente(
 
 
 MENINO DE RUA 
@@ -695,6 +416,10 @@ d6 Fraquezas
 4 Eu prefiro matar alguém enquanto dorme que em uma luta justa.
 5 Não é roubo se eu precisar de algo mais do que a outra pessoa precisa.
 6 Pessoas que não conseguem cuidar de si mesmas têm aquilo que merecem.
+
+));
+antecedentes.push(new antecedente(
+
 NOBRE Você entende de riqueza, poder e privilégios.
 Você carrega um título de nobreza, e sua família possui terras, coleta impostos e exerce uma influencia política significativa.
 Você pode ser um aristocrata mimado pouco familiarizado com o trabalho ou com o desconforto, um ex-comerciante elevado à nobreza, ou um malandro deserdado com um sentido desproporcional de direitos.
@@ -763,7 +488,8 @@ Você tem o serviço de três servos leais a sua família.
 Esses servos podem ser assistentes ou mensageiros, e um pode ser um mordomo.
 Seus servos são pessoas comuns que podem executar tarefas rotineiras para você, mas eles não lutam por você, não seguirão você em áreas obviamente perigosas (como masmorras) e o deixarão se forem frequentemente ameaçados ou abusados.
 
-
+));
+antecedentes.push(new antecedente(
 
 SÁBIO 
 Você ficou anos aprendendo sobre o conhecimento do multiverso.
@@ -823,8 +549,8 @@ Eu paro e tomo notas de sua anatomia.
 6 Eu não consigo guardar um segredo para salvar minha vida.
 Ou a vida de qualquer outra pessoa.
   
-
-
+));
+antecedentes.push(new antecedente(
 SOLDADO 
 A guerra esteve na sua vida desde que você se recorda.
 Você foi treinado desde jovem, estudou o uso das armas e armaduras, aprendeu técnicas básicas de sobrevivência, incluindo como permanecer vivo no campo de batalha.
@@ -881,3 +607,4 @@ d6 Fraqueza
 3 Eu cometi um terrível erro em batalha, o que custou muitas vidas – eu farei de tudo para manter esse erro em segredo.
 4 Meu ódio por meus inimigos é cego e irracional; 5 Eu obedeço a lei, mesmo se a lei trouxer a angústia.
 6 Eu prefiro comer minha armadura a admitir que estou errado
+));
