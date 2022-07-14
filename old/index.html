@@ -97,43 +97,43 @@ float: right;
 	<button id="reset" onclick="reset()">Reset</button> 
 
 	<select id="selLevel">
-	<option value="1">1º Nivel</option>
-	<option value="2">2º Nivel</option>
-	<option value="3">3º Nivel</option>
-	<option value="4">4º Nivel</option>
-	<option value="5">5º Nivel</option>
-	<option value="6">6º Nivel</option>
-	<option value="7">7º Nivel</option>
-	<option value="8">8º Nivel</option>
-	<option value="9">9º Nivel</option>
-	<option value="10">10º Nivel</option>
-	<option value="21">Aleatorio 1-4</option>
-	<option value="22">Aleatorio 5-10</option>
+	<option value="1">1st level</option>
+	<option value="2">2nd level</option>
+	<option value="3">3rd level</option>
+	<option value="4">4th level</option>
+	<option value="5">5th level</option>
+	<option value="6">6th level</option>
+	<option value="7">7th level</option>
+	<option value="8">8th level</option>
+	<option value="9">9th level</option>
+	<option value="10">10th level</option>
+	<option value="21">Level 1-4</option>
+	<option value="22">Level 5-10</option>
 <!--	<option value="23">Level 8-12<option>
 	<option value="24">Level 12-16</option>
 	<option value="25">Level 17-20</option> 
-	<option value="11">11º Nivel</option>
-	<option value="12">12º Nivel</option>
-	<option value="13">13º Nivel</option>
-	<option value="14">14º Nivel</option>
-	<option value="15">15º Nivel</option>
-	<option value="16">16º Nivel</option>
-	<option value="17">17º Nivel</option>
-	<option value="18">18º Nivel</option>
-	<option value="19">19º Nivel</option>
-	<option value="20">20º Nivel</option>
+	<option value="11">11th level</option>
+	<option value="12">12th level</option>
+	<option value="13">13th level</option>
+	<option value="14">14th level</option>
+	<option value="15">15th level</option>
+	<option value="16">16th level</option>
+	<option value="17">17th level</option>
+	<option value="18">18th level</option>
+	<option value="19">19th level</option>
+	<option value="20">20th level</option>
 
 -->
-	<option value="0">Aleatorio 1-10</option>
+	<option value="0">Level 1-10</option>
 
 	</select> 
 
-	<select id="selGender"><option value="0">Qualquer sexo</option>
-	<option value="1">Masculino</option>
-	<option value="2">Feminino</option>
+	<select id="selGender"><option value="0">Any Gender</option>
+	<option value="1">Male</option>
+	<option value="2">Female</option>
 	</select>
 
-	<select id="selRace"><option value="0">Qualquer raça</option>
+	<select id="selRace"><option value="0">Any Race</option>
 	<option value="21">Aarakocra</option>	
 	<option value="1">Dragonborn</option>
 	<option value="11">Dwarf (Hill)</option>
@@ -158,22 +158,22 @@ float: right;
 	</select>
 
 	 
-	<select id="selClass" onchange="selectClass()"><option value="0">Qualquer classe</option>
-	<option value="1">Barbaro</option>
-	<option value="2">Bardo</option>
-	<option value="3">Clerigo</option>
-	<option value="4">Druida</option>
-	<option value="5">Guerreiro (Eldritch Knight)</option>
-	<option value="6">Guerreiro (Destreza alta)</option>
-	<option value="7">Guerreiro (Força alta)</option>
-	<option value="8">Monge</option>
-	<option value="9">Paladino</option>
+	<select id="selClass" onchange="selectClass()"><option value="0">Any Class</option>
+	<option value="1">Barbarian</option>
+	<option value="2">Bard</option>
+	<option value="3">Cleric</option>
+	<option value="4">Druid</option>
+	<option value="5">Fighter (Eldritch Knight)</option>
+	<option value="6">Fighter (High Dexterity)</option>
+	<option value="7">Fighter (High Strength)</option>
+	<option value="8">Monk</option>
+	<option value="9">Paladin</option>
 	<option value="10">Ranger</option>
-	<option value="11">Ladrão (Ladrão ou Assasino)</option>
-	<option value="12">Ladrão (Arcane Trickster)</option>
-	<option value="13">Feiticeiro</option>
+	<option value="11">Rogue (Thief or Assassin)</option>
+	<option value="12">Rogue (Arcane Trickster)</option>
+	<option value="13">Sorcerer</option>
 	<option value="14">Warlock</option>
-	<option value="15">Mago</option>
+	<option value="15">Wizard</option>
 	</select>
 
 	<span id="clericOptions" class="classOptions">
@@ -325,14 +325,14 @@ float: right;
 <span style="font: 10pt helvetica;">
 
 	<select id="genMethod" onClick="switchBuy()">
-	<option value="0" selected="selected">Jogue os Atributos</option>
-	<option value="1">Atributos Aleatorios</option>
-	<option value="2">Atributos Manual</option>
-	<option value="3">Atributos Detalhados</option>
+	<option value="0" selected="selected">Roll abilities</option>
+	<option value="1">Buy abilities (random)</option>
+	<option value="2">Buy abilities (manual)</option>
+	<option value="3">Buy abilities (detailed)</option>
 	</select>
 
 	<select id="selAbil">
-	<option value="0" selected="selected">Rolar novamente de o resultado for menor que 65</option>
+	<option value="0" selected="selected">Reroll if the total is under 65</option>
 	<option value="35">35</option>
 	<option value="40">40</option>
 	<option value="45">45</option>
@@ -454,14 +454,14 @@ float: right;
 			<span id="ar"></span>
 		</div>
 		<div style="weapons">
-			<b>Combate corpo a corpo:</b>
+			<b>Melee weapons:</b>
 			<br>
 			<span id="wp"></span>
 		</div>
 		<b>Proficient skills:</b>  <span id="sk"></span><br>
 		<span id="ab"></span><br>
 
-		<b>Equipamentos:</b>  <span id="eq"></span>
+		<b>Equipment:</b>  <span id="eq"></span>
 		<div class="spells" id="spellspot"><span id="sp"></span></div>
 	</div>
 </div>
@@ -871,7 +871,7 @@ var languageOutput = "";
 var moreLang=0;
 // var skills = 
 var speed=0;
-var size = "Médio";
+var size = "Medium";
 var factions = ["Harpers","Order of the Gauntlet","Emerald Enclave","Lords' Alliance","Zhentarim"];
 var myFaction = -1;
 var lifestyles = ["Wretched","Squalid","Poor","Modest","Comfortable","Wealthy","Artistocratic"];
@@ -1536,10 +1536,10 @@ function showAbil () {
 		passive += Math.floor(prof/2);
 	}
 
-	output += "Atributos:   &nbsp; STR:  " + abil[0] + " (" + showPlus( mod[0] ) + ") &nbsp; DEX:  " + abil[1] + " (" + showPlus( mod[1] ) + ") &nbsp; CON: " + abil[2]  + " ("+ showPlus( mod[2] ) +
+	output += "Ability scores:   &nbsp; STR:  " + abil[0] + " (" + showPlus( mod[0] ) + ") &nbsp; DEX:  " + abil[1] + " (" + showPlus( mod[1] ) + ") &nbsp; CON: " + abil[2]  + " ("+ showPlus( mod[2] ) +
 		") &nbsp; INT: " + abil[3] + " ("+showPlus ( mod[3] )+") &nbsp;  WIS: " + abil[4] + " ("+showPlus ( mod[4] )+") &nbsp; CHA: " + abil[5] + " ("+showPlus ( mod[5] )+
-		")<br>Modificadores de Atributos:  &nbsp; STR:  " + showPlus( saves[0] ) + " &nbsp; DEX:  " + showPlus( saves[1] ) + "  &nbsp; CON: " +  showPlus( saves[2] ) + " &nbsp; INT: " + showPlus ( saves[3] )+" &nbsp;  WIS: " + showPlus ( saves[4] )+" &nbsp; CHA: " +showPlus ( saves[5] )+
-		"<br>Iniciativa:  " + showPlus( initiative ) + " &nbsp; Deslocamento:  " + speed;
+		")<br>Saving throws:  &nbsp; STR:  " + showPlus( saves[0] ) + " &nbsp; DEX:  " + showPlus( saves[1] ) + "  &nbsp; CON: " +  showPlus( saves[2] ) + " &nbsp; INT: " + showPlus ( saves[3] )+" &nbsp;  WIS: " + showPlus ( saves[4] )+" &nbsp; CHA: " +showPlus ( saves[5] )+
+		"<br>Initiative:  " + showPlus( initiative ) + " &nbsp; Speed:  " + speed;
 
 		//show bonus for boots of striding and sprinigng
 		if ((bootsOfSS == true) && (speed < 30)) 
@@ -1548,12 +1548,12 @@ function showAbil () {
 			output += " (50 flying speed)"
 		}
 		
-		output += " &nbsp; Precepção passiva:  " + passive +" &nbsp; Tamanho:  " + size+" &nbsp; Bonus de Proeficiencia:  " + showPlus(prof) + " &nbsp; Genero:";
+		output += " &nbsp; Passive perception:  " + passive +" &nbsp; Size:  " + size+" &nbsp; Proficiency bonus:  " + showPlus(prof);
 
 	if (gender==2) {
-		output += "Feminino";
+		output += " &nbsp; Gender: Female";
 	} else {
-		output += "Masculino";
+		output += " &nbsp; Gender: Male";
 	}
 	output += "<br>";
 }
@@ -1735,7 +1735,7 @@ racetxt = "";
 // 	1 in 4 chance of non-elf/dwarf/half/hum
 //exotic=1;
 if (exotic == 1) {
-	abOutput+="<b>Traços Raciais:</b> ";
+	abOutput+="<b>Racial Traits:</b> ";
 
 	ra = Math.floor((Math.random() * 14) + 1); 
 	if (ra > 7) {
@@ -1774,7 +1774,7 @@ if (exotic == 1) {
 		abil[1] += 1;
 		languageOutput = "Common, Gnomish";
 		speed=25;
-		size="Pequeno";
+		size="Small";
 		abOutput += "Darkvision, Gnome Cunning, Natural Illusionist, Speak with Small Animals";
 		raceSpells.push("Minor Illusion");	
 		raceSpellAbility=3;
@@ -1890,7 +1890,7 @@ if (exotic == 1) {
 		abil[3] += 2;
 		speed=25;
 		abil[2] += 1;
-		size="Pequeno";
+		size="Small";
 		languageOutput = "Common, Gnomish";
 		if (gender==2) {
 			name = gnomeNameF[Math.floor(Math.random() * gnomeNameF.length)];
@@ -1906,7 +1906,7 @@ if (exotic == 1) {
 		abil[1] += 2;
 		speed=25;
 		abil[4] += 1;
-		size="Médio";
+		size="Medium";
 		languageOutput = "Common, Aarakocra, Auran";
 		abOutput += "Flight, Talons";
 		name = aarName[Math.floor(Math.random() * aarName.length)];
@@ -1916,7 +1916,7 @@ if (exotic == 1) {
 		abil[3] += 2;
 		speed=25;
 		abil[1] += 1;
-		size="Pequeno";
+		size="Small";
 		languageOutput = "Common, Gnomish, Undercommon";
 		if (gender==2) {
 			name = deepGnomeNameF[Math.floor(Math.random() * deepGnomeNameF.length)];
@@ -1934,7 +1934,7 @@ if (exotic == 1) {
 		raceSpellAbility = 2;
 		abil[2] += 2;
 		speed=30;
-		size="Médio";
+		size="Medium";
 		languageOutput = "Common, Primordial";
 		if (gender==2) {
 			name = humanNameF[Math.floor(Math.random() * humanNameF.length)];
@@ -1951,7 +1951,7 @@ if (exotic == 1) {
 		raceSpellAbility = 2;
 		abil[2] += 2;
 		speed=30;
-		size="Médio";
+		size="Medium";
 		languageOutput = "Common, Primordial";
 		if (gender==2) {
 			name = humanNameF[Math.floor(Math.random() * humanNameF.length)];
@@ -1970,7 +1970,7 @@ if (exotic == 1) {
 		raceSpellAbility = 2;
 		abil[2] += 2;
 		speed=30;
-		size="Médio";
+		size="Medium";
 		languageOutput = "Common, Primordial";
 		if (gender==2) {
 			name = humanNameF[Math.floor(Math.random() * humanNameF.length)];
@@ -1989,7 +1989,7 @@ if (exotic == 1) {
 		raceSpellAbility = 2;
 		abil[2] += 2;
 		speed=30;
-		size="Médio";
+		size="Medium";
 		languageOutput = "Common, Primordial";
 		if (gender==2) {
 			name = humanNameF[Math.floor(Math.random() * humanNameF.length)];
@@ -2007,7 +2007,7 @@ if (exotic == 1) {
 		mySkills.push(3);
 		skLearn[3] = true;
 		speed=30;
-		size="Médio";
+		size="Medium";
 		languageOutput = "Common, Giant";
 		name = goliathNameBirth[Math.floor(Math.random() * goliathNameBirth.length)] + "  \"" + goliathNameNick[Math.floor(Math.random() * goliathNameNick.length)] + "\" " + goliathNameClan[Math.floor(Math.random() * goliathNameClan.length)];
 		break;
@@ -2024,7 +2024,7 @@ else	{
 		ra = forceRace-10;
 
 	if (ra != 3)
-		abOutput+="<b>Traços raciais:</b> ";
+		abOutput+="<b>Racial Traits:</b> ";
 
 	switch (ra) {
 	case (1):
@@ -2142,7 +2142,7 @@ else	{
 		racetxt="Stout Halfling";
 		abil[1] += 2;
 		abil[2] += 1;
-		size="Pequeno";
+		size="Small";
 		languageOutput = "Common, Halfling";
 		abOutput += "Lucky, Brave, Halfling Nimbleness, Stout Resilience";
 		speed=25;
@@ -2157,7 +2157,7 @@ else	{
 		racetxt="Lightfoot Halfling";
 		abil[1] += 2;
 		abil[5] += 1;
-		size="Pequeno";
+		size="Small";
 		languageOutput = "Common, Halfling";
 		abOutput += "Lucky, Brave, Halfling Nimbleness, Naturally Stealthy";
 		speed=25;
@@ -4083,28 +4083,28 @@ i=0;
 // +2 ability points for level 4
 if (level > 3) {
 	abOutput += ", Ability Score Improvement (4th";
-	console.log("4º Nivel ability bonus +2");
+	console.log("4th level ability bonus +2");
 	x=2;
 	
 	if ((cl==5) || (cl==6) || (cl==7)) {
 		if (level > 7) {
-			abOutput +=", 6th and 8º Nivels";
+			abOutput +=", 6th and 8th levels";
 		} else if (level > 5) {
-			abOutput +=" and 6º Nivels";
+			abOutput +=" and 6th levels";
 		} else {
 			abOutput +=" level";			
 		}
 	} else if ((cl==11) || (cl==12)) {
 		if (level >9) {
-			abOutput +=", 8th and 10º Nivels";
+			abOutput +=", 8th and 10th levels";
 		} else if (level >7) {
-			abOutput +=" and 8º Nivels";			
+			abOutput +=" and 8th levels";			
 		} else {
 			abOutput +=" level";
 		}
 	} else {
 		if (level >7) {
-			abOutput +=" and 8º Nivels";			
+			abOutput +=" and 8th levels";			
 		}
 		else {
 			abOutput +=" level";	
@@ -6230,7 +6230,7 @@ if (cl==2) {
 	mySpells = mySpells.concat(tempSpells);
 
 
-//4º Nivel
+//4th level
 	tempSpells=[];
 	x=sp4;
 	while (x > 0) {
@@ -6249,7 +6249,7 @@ if (cl==2) {
 	mySpells = mySpells.concat(tempSpells);
 
 
-//5º Nivel
+//5th level
 	tempSpells=[];
 	x=sp5;
 	
@@ -6267,7 +6267,7 @@ if (cl==2) {
 	tempSpells.sort();
 	mySpells = mySpells.concat(tempSpells);
 
-	// 6º Nivel bard lore spells
+	// 6th level bard lore spells
 	if (abOutput.indexOf("Additional Magic") > -1) {
 		tempSpells=[];
 		x=2;
@@ -6285,7 +6285,7 @@ if (cl==2) {
 	}
 
 
-		//10º Nivel secrets
+		//10th level secrets
 	if (level > 9) {
 		tempSpells=[];
 		x=2;
@@ -6673,7 +6673,7 @@ if (cl==3) {
 
 
 
-//4º Nivel
+//4th level
 	tempSpells=[];
 	x=sp4;
 	
@@ -6698,7 +6698,7 @@ if (cl==3) {
 
 
 
-//5º Nivel
+//5th level
 	tempSpells=[];
 	x=sp5;
 	
@@ -6904,7 +6904,7 @@ if (cl==4) {
 
 
 
-//4º Nivel
+//4th level
 	tempSpells=[];
 	x=sp4;
 	while (x > 0) {
@@ -6927,7 +6927,7 @@ if (cl==4) {
 
 
 
-//5º Nivel
+//5th level
 	tempSpells=[];
 	x=sp5;
 	while (x > 0) {
@@ -7652,7 +7652,7 @@ if (cl==13) {
 
 
 
-//4º Nivel
+//4th level
 	tempSpells=[];
 	x=sp4;
 	while (x > 0) {
@@ -7673,7 +7673,7 @@ if (cl==13) {
 
 
 
-//5º Nivel
+//5th level
 	tempSpells=[];
 	x=sp5;
 	while (x > 0) {
@@ -8083,7 +8083,7 @@ if (cl==15) {
 	if (level >1)
 		sp1 += 2;
 
-	// 3rd and 4º Nivels add more 2nd level spells
+	// 3rd and 4th levels add more 2nd level spells
 	if (level >2) 
 		sp2 += ((level-2) * 2);
 
@@ -8431,7 +8431,7 @@ if (cl==15) {
 
 
 
-	// polymorph automatically in book for 10º Nivel transmutation wizards
+	// polymorph automatically in book for 10th level transmutation wizards
 }
 
 
@@ -8647,9 +8647,9 @@ if (ss1 > 0) {
 	if (ss3 > 0) 
 		spOutput += ", " + ss3+ " third level";
 	if (ss4 > 0) 
-		spOutput += ", " + ss4+ " fourº Nivel";
+		spOutput += ", " + ss4+ " fourth level";
 	if (ss5 > 0) 
-		spOutput += ", " + ss5+ " fifº Nivel";
+		spOutput += ", " + ss5+ " fifth level";
 	}
 	if (cl==14) {
 		if (level < 3)
@@ -8657,9 +8657,9 @@ if (ss1 > 0) {
 		if ((level > 2) && (level <5))
 			spOutput += " second level";
 		if (level > 8) {
-			spOutput += " fifº Nivel";
+			spOutput += " fifth level";
 		} else if (level > 6) {
-			spOutput += " fourº Nivel";
+			spOutput += " fourth level";
 		} else if (level > 4) {
 			spOutput += " third level";
 		}
@@ -10403,7 +10403,7 @@ eqOutput += weOutput;
 
 
 if (maOutput.length > 0) {
-	eqOutput += "<br><b>Itens Magicos";	
+	eqOutput += "<br><b>Magic Item";	
 	if ((maOutput.indexOf(",") != maOutput.lastIndexOf(",")) || (maOutput.indexOf("otions") > -1)) {
 		eqOutput += "s";
 	}
@@ -10563,7 +10563,7 @@ for (x=0;x < myWp.length;x++) {
 	}
 }
 if (wrOutput.length >0)
-	wpOutput += "<b>Armas de longa distancia:</b>  <br>" + wrOutput;
+	wpOutput += "<b>Ranged weapons:</b>  <br>" + wrOutput;
 
 
 
@@ -10777,7 +10777,7 @@ initiative = mod[1];
 if (abOutput.indexOf("Jack of all") > -1) {
 	initiative += Math.floor(prof/2);
 }
-//7º Nivel champions get a bonus too
+//7th level champions get a bonus too
 if (abOutput.indexOf("Remarkable Athlete") > -1) {
 	initiative += Math.ceil(prof/2);
 }
