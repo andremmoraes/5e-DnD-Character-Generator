@@ -1,129 +1,110 @@
-class dados
-{
-  constructor(lados){
-    this.lados = lados;
+class nomesRacas{
+  constructor(nomesMasculinos=[], nomesFemininos=[], nomesTribos=[])
+  {
+    this.nomesMasculinos=nomesMasculinos;
+    this.nomesFemininos=nomesFemininos;
+    this.nomesTribos=nomesTribos;
+  }
+}
+
+class tamanhoRaca{
+  constructor(nome='', descricao='', bonus=0)
+  {
+    this.nome=nome;
+    this.descricao=descricao;
+    this.bonus=bonus;
+  }
+}
+
+class deslocamento{
+  constructor(deslocamento, tipoDelocamento)
+  {
+    this.metros;
+    this.quadrados;
+    this.pes;
+
+    switch (tipoDelocamento) {
+      case 'quadrado':
+        this.quadrados = deslocamento;
+        this.metros =  deslocamento*1,5;
+        this.pes =  0;               
+        break;
+    
+//        case 'pes':        
+//        this.pes = deslocamento;
+//        this.metros =  deslocamento/5;
+//        this.quadrados =  deslocamento*1,5*5;               
+//        break;
+    
+        case 'metros':        
+        this.metros =  deslocamento;
+        this.quadrados = deslocamento/1,5;
+        this.pes =  0;               
+        break;
+    
+      default:
+        this.metros =  deslocamento;
+        this.quadrados = deslocamento;
+        this.pes =  deslocamento;               
+        break;
+    }
+  }
+}
+
+class vantagemRaca{
+  constructor(nome, descricao,tipo, idioma=[])
+  {
+    this.nome=nome;
+    this.descricao=descricao;
+    this.tipo=tipo;
+    this.idioma=idioma;
+  }
+}
+
+class raca{
+  constructor(nome='', descricao='', nomesRacas, atributos, tamanho, deslocamento)
+  {
+    this.nome=nome;
+    this.descricao=descricao;
+    this.nomesRacas=nomesRacas;
+    this.atributos=atributos;
+    this.tamanho=tamanho;
+    this.deslocamento=deslocamento;
   }
 
-  rolagem() 
-  {
-    return rolar(this.lados);
-  }
+  RetornarRacaPersonagem(sexo='masculino') {
+    var qtdnomes = 0;
+    var i = 0;
+    
+    if (sexo==='masculino'){
+      qtdnomes = this.nomesRacas.nomesMasculinos.length;
+      i = Math.floor(Math.random() * qtdnomes);
+      this.nome = this.nomesRacas.nomesMasculinos[i];
+    }
+    else{
+      qtdnomes = this.nomesRacas.nomesFemininos.length;
+      i = Math.floor(Math.random() * qtdnomes);
+      this.nome = this.nomesRacas.nomesFemininos[i];
 
-  static rolar(lados=null)
-  {
-    if (lados<=0)
-    {
-      lados = 1;
     }
 
-    return  Math.floor(Math.random() * lados) + 1;
+    qtdnomes = this.nomesRacas.nomesTribos.length;
+    i = Math.floor(Math.random() * qtdnomes);
+
+    this.nome += ' '+this.nomesRacas.nomesTribos[i];
+
+    return this.nome;
   }
+
 }
 
-class D2 extends dados
-{
-  constructor(){
-    super(2);
-  }
-  
-  static rolar()
-  {    
-    return super.rolar(2);
-  }  
-}
 
-class D4 extends dados
-{
-  constructor(){
-    super(4);
+class personagem {
+  constructor(raca, classe, atributos, antecedente) {
+    this.raca =raca;
+    this.nome = raca.RetornarRacaPersonagem('f'); 
+    this.classe =classe;
+    this.atributos =atributos;
+    this.antecedente = antecedente;
   }
-  static rolar()
-  {    
-    return super.rolar(4);
-  }  
-}
-
-class D6 extends dados
-{
-  constructor(){
-    super(6);
-  }
-  static rolar()
-  {    
-    return super.rolar(6);
-  }  
-}
-
-class D8 extends dados
-{
-  constructor(){
-    super(8);
-  }
-  static rolar()
-  {    
-    return super.rolar(8);
-  }  
-}
-
-class D10 extends dados
-{
-  constructor(){
-    super(10);
-  }
-  static rolar()
-  {    
-    return super.rolar(10);
-  }  
-}
-class D12 extends dados
-{
-  constructor(){
-    super(12);
-  }
-  static rolar()
-  {    
-    return super.rolar(12);
-  }  
-}
-
-class D20 extends dados
-{
-  constructor(){
-    super(20);
-  }
-  static rolar()
-  {    
-    return super.rolar(20);
-  }  
-}
-
-class D100 extends dados
-{
-  constructor(){
-    super(100);
-  }
-  static rolar()
-  {    
-    return super.rolar(100);
-  }  
-}
-
-class antecedente
-{
-    constructor(
-      nome = '', descricao='', pericias=[], idiomas=[], equipamentos=[], 
-      caracteristica='', caracteristicasugerida='', 
-      personalidades=[], ideais=[], vínculos=[], fraquezas=[]) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.pericias = pericias;
-        this.idiomas = idiomas;
-        this.equipamentos = equipamentos;
-        this.caracteristica = caracteristica;
-        this.caracteristicasugerida = caracteristicasugerida;
-        this.personalidades = personalidades;
-        this.ideais = ideais;
-        this.vínculos = vínculos;
-        this.fraquezas = fraquezas;
-      }
 }

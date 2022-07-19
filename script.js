@@ -1,4 +1,20 @@
+let person = new personagem(racas[0], null,null,null);
+
+let _antecendete = antecedentes[10];
+let _atributos = new atributos(
+	RolagemAtributos.RolarAtributo4d6(),
+	RolagemAtributos.RolarAtributo4d6(),
+	RolagemAtributos.RolarAtributo4d6(),
+	RolagemAtributos.RolarAtributo4d6(),
+	RolagemAtributos.RolarAtributo4d6(),
+	RolagemAtributos.RolarAtributo4d6()
+	);
+
+person.atributos = _atributos;
+person.antecedentes = _antecendete;
+
 var firstAbil=true;
+
 
 function checkRun() {
 
@@ -1063,8 +1079,19 @@ function showAbil () {
 		passive += Math.floor(prof/2);
 	}
 
-	output += "Ability scores:   &nbsp; STR:  " + abil[0] + " (" + showPlus( mod[0] ) + ") &nbsp; DEX:  " + abil[1] + " (" + showPlus( mod[1] ) + ") &nbsp; CON: " + abil[2]  + " ("+ showPlus( mod[2] ) +
-		") &nbsp; INT: " + abil[3] + " ("+showPlus ( mod[3] )+") &nbsp;  WIS: " + abil[4] + " ("+showPlus ( mod[4] )+") &nbsp; CHA: " + abil[5] + " ("+showPlus ( mod[5] )+
+	output += "Raça:" + person.nome;//raca.RetornarRacaPersonagem('masculino');
+
+	output += "Atriutos:   &nbsp;" ;
+	output += '   &nbsp;' + person.atributos.forca.nome + ":" + person.atributos.forca.valor + '('+person.atributos.forca.modificador+')';
+	output += '   &nbsp;' + person.atributos.destreza.nome + ":" + person.atributos.destreza.valor + '('+person.atributos.destreza.modificador+')';
+	output += '   &nbsp;' + person.atributos.constituicao.nome + ":" + person.atributos.constituicao.valor + '('+person.atributos.constituicao.modificador+')';
+	output += '   &nbsp;' + person.atributos.inteligencia.nome + ":" + person.atributos.inteligencia.valor + '('+person.atributos.inteligencia.modificador+')';
+	output += '   &nbsp;' + person.atributos.sabedoria.nome + ":" + person.atributos.sabedoria.valor + '('+person.atributos.sabedoria.modificador+')';
+	output += '   &nbsp;' + person.atributos.carisma.nome + ":" + person.atributos.carisma.valor + '('+person.atributos.carisma.modificador+')';
+
+	output += 
+	//"<br>Atriutos:   &nbsp; STR:  " + abil[0] + " (" + showPlus( mod[0] ) + ") &nbsp; DEX:  " + abil[1] + " (" + showPlus( mod[1] ) + ") &nbsp; CON: " + abil[2]  + " ("+ showPlus( mod[2] ) +
+	//	") &nbsp; INT: " + abil[3] + " ("+showPlus ( mod[3] )+") &nbsp;  WIS: " + abil[4] + " ("+showPlus ( mod[4] )+") &nbsp; CHA: " + abil[5] + " ("+showPlus ( mod[5] )+
 		")<br>Saving throws:  &nbsp; STR:  " + showPlus( saves[0] ) + " &nbsp; DEX:  " + showPlus( saves[1] ) + "  &nbsp; CON: " +  showPlus( saves[2] ) + " &nbsp; INT: " + showPlus ( saves[3] )+" &nbsp;  WIS: " + showPlus ( saves[4] )+" &nbsp; CHA: " +showPlus ( saves[5] )+
 		"<br>Initiative:  " + showPlus( initiative ) + " &nbsp; Speed:  " + speed;
 
@@ -3902,9 +3929,30 @@ var bond=Math.floor((Math.random() * 6) +1);
 var flaw=Math.floor((Math.random() * 6) +1);
 var bgText="";
 
-let _antecendete = antecedentes.length;
 
-bgOutput += "<b style=\"font-size: large;\">aNTECEDENTES: " + _antecendete;
+
+
+
+bgOutput += "<b style=\"font-size: large;\">Antecedente:</b>"+person.antecedentes.nome+"<br>";
+//bgOutput += "<b>nome:</b>"+_antecendete.nome+'<br>';
+//bgOutput += "<b>descricao:</b>"+_antecendete.descricao+'<br>';
+//bgOutput += "<b>pericias:</b>"+_antecendete.pericias+'<br>';
+//bgOutput += "<b>idiomas:</b>"+_antecendete.idiomas+'<br>';
+//bgOutput += "<b>equipamentos:</b>"+_antecendete.equipamentos+'<br>';
+//bgOutput += "<b>caracteristica:</b>"+_antecendete.caracteristica+'<br>';
+//bgOutput += "<b>caracteristicasugerida:</b>"+_antecendete.caracteristicasugerida+'<br>';
+bgOutput += "<b>personalidades:</b>"+person.antecedentes.personalidades[D8.rolar()]+'<br>';
+bgOutput += "<b>ideais:</b>"+person.antecedentes.ideais[D6.rolar()]+'<br>';
+bgOutput += "<b>vínculos:</b>"+person.antecedentes.vínculos[D6.rolar()]+'<br>';
+bgOutput += "<b>fraquezas:</b>"+person.antecedentes.fraquezas[D6.rolar()]+'<br>';
+
+// + _antecendete;
+
+
+
+//antecedentes.forEach(element => {	
+//});
+
 
 switch (bg) {
 			
