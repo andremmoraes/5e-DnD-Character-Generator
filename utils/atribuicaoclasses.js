@@ -1,6 +1,52 @@
-let antecedentes = [];
-
-antecedentes.push(new antecedente(
+let tendencias = [
+	new Tendencia(
+		new Lealdade('Leal'),
+		new Moralidade('Bom'),
+		'é a tendência de criaturas que se pode contar para fazer o que é correto como é esperado pela sociedade. Dragões dourados, paladinos e muitos anões são leais e bondosos'
+	),
+	new Tendencia(
+		new Lealdade('Neutro'),
+		new Moralidade('Bom'),
+		'é a tendência do povo que faz o melhor que pode para ajudar outros de acordo com suas necessidades. Muitos celestiais, alguns gigantes das nuvens, e grande parte dos gnomos são neutros e bondosos'
+	),
+	new Tendencia(
+		new Lealdade('Caótico'),
+		new Moralidade('Bom'),
+		'é a tendência de criaturas que agem de acordo com sua própria consciência, se importando pouco com as expectativas dos outros. Dragões de cobre, muitos elfos e unicórnios são caóticos e bondosos'
+	),
+	new Tendencia(
+		new Lealdade('Leal'),
+		new Moralidade('Neutro'),
+		'é a tendência dos indivíduos que agem de acordo com as leis, tradições ou códigos pessoais. Muitos monges e alguns magos são leais e neutros'
+	),
+	new Tendencia(
+		new Lealdade('Neutro'),
+		new Moralidade('Neutro'),
+		'é a tendência daqueles que preferem manter distância de questões morais e não tomar partido, fazendo o que aparenta ser melhor conforme a situação. O povo lagarto, muitos druidas e diversos humanos são neutros'
+	),
+	new Tendencia(
+		new Lealdade('Caótico'),
+		new Moralidade('Neutro'),
+		'é a tendência das criaturas que seguem seus caprichos, mantendo sua liberdade pessoal acima de tudo. Muitos bárbaros e ladinos, e alguns bardos, são caóticos e neutros'
+	),
+	new Tendencia(
+		new Lealdade('Leal'),
+		new Moralidade('Mau'),
+		'é a tendência das criaturas que conseguem metodicamente tudo o que querem, dentro dos limites de uma tradição, lei ou ordem. Diabos, dragões azuis e hobgoblins são leais e malignos'
+	),
+	new Tendencia(
+		new Lealdade('Neutro'),
+		new Moralidade('Mau'),
+		'é a tendência daqueles que farão tudo o que quiserem, sem compaixão ou remorso. Muitos drows, alguns gigantes das nuvens e yugoloths são neutros e malignos'
+	),
+	new Tendencia(
+		new Lealdade('Caótico'),
+		new Moralidade('Mau'),
+		'é a tendência de criaturas que agem com violência arbitrária, estimulada por sua ganância, ódio ou sede de sangue. Demônios, dragões vermelhos e orcs são caóticos e malignos'
+	)
+];
+let antecedentes = [
+	new Antecedente(
 	'ACÓLITO',
 	'Você viveu a serviço de um templo de algum deus especifico ou de um panteão de deuses. Você age como um intermediário entre o reino divino e o reino dos mortais, realizando rituais e ofertando sacrifícios para conduzir cada vez mais pessoas a adorarem a divindade. Você não é necessariamente um clérigo – realizar ritos sagrados não é a mesma coisa que canalizar poder divino. Escolha um deus, um panteão de deuses ou outro ser quase divino entre aqueles descritos no apêndice B ou outro especificado pelo seu Mestre para detalhar a natureza do seu serviço religioso. Você foi um serviçal menor no templo, criado desde a infância para auxiliar os sacerdotes em ritos sagrados? Ou você foi um alto sacerdote que repentinamente sentiu o chamado para servir seu deus de uma maneira diferente? Talvez você foi o líder de um pequeno culto não associado a templo algum, ou mesmo uma seita secreta que servia a uma entidade demoníaca que agora você nega.',
 	['Intuição', 'Religião'],
@@ -42,8 +88,8 @@ antecedentes.push(new antecedente(
 		'Eu suspeito de estranhos e sempre espero o pior deles.',
 		'Depois escolher um objetivo, eu fico obcecado em cumpri-lo, até mesmo em detrimento de qualquer outra coisa em minha vida.'
 	]
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'ARTESÃO DE GUILDA',
 	'Você é membro de uma guilda de artesãos, hábil em um ofício específico e com uma relação bem próximo com outros artesãos. Você é uma parte bem consolidada do mundo mercantil, liberto pelo talento e riqueza de uma ordem social feudal repressora. Você aprendeu suas habilidades como um aprendiz de um mestre artesão, sob o patrocínio de sua guilda, até se tornar um mestre por direito.',
 	['Intuição', 'Persuasão'],
@@ -109,8 +155,8 @@ antecedentes.push(new antecedente(
 		'Eu mataria para adquirir um titulo de nobreza.',
 		'Eu tenho ciúmes terríveis de qualquer pessoa que possa ofuscar minha obra. Aonde quer que eu vá, estou cercado de rivais.'
 	]
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'ARTISTA',
 	'Você se sobressai em frente a uma plateia. Você sabe como arrebatá-los, entretê-los e até inspirá-los. Suas poesias podem agitar os corações daqueles que o ouvem, despertar tristeza ou alegria, riso ou fúria. Sua música levanta seus espíritos ou capta sua tristeza. Seus passos de dança cativam, seu humor ofende. Qualquer que seja a técnica que você usa, sua arte é sua vida.',
 	['Acrobacia', 'Atuação', 'Proficiências em Ferramentas: kit de disfarce, um tipo de instrumento musical'],
@@ -160,9 +206,8 @@ antecedentes.push(new antecedente(
 	'Uma vez eu satirizei um nobre que ainda quer minha cabeça. Foi um erro que provavelmente vai se repetir.',
 	'Eu tenho problemas para manter meus sentimentos verdadeiros ocultos. Minha língua afiada me mete em problemas.',
 	'Apesar dos meus melhores esforços, eu não sou confiável para os meus amigos.']
-)
-);
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'CHARLATÃO',
 	'Você sempre soube lidar com pessoas. Você sabe aquilo que os toca, você pode trazer à tona os desejos de seus corações após alguns minutos de conversa, e com algumas perguntas-chave você pode lê-los como se fossem livros infantis. É um talento útil e que você está perfeitamente disposto a usar para sua vantagem. Você sabe o que as pessoas querem e você entrega, ou melhor, você promete entregar. O bom senso diz às pessoas para ficar longe das coisas que parecem boas demais para ser verdade, mas esse bom senso parece estar em falta quando você está por perto. A garrafa com líquido rosa certamente vai curar esse furúnculo inconveniente, esta pomada – nada mais do que um pouco de gordura com uma pitada de pó de prata – pode restaurar a juventude e o vigor, e há uma ponte na cidade que, de repente, está à venda. Essas maravilhas soam improváveis, mas você as faz soar como um negócio real.',
 	['Enganação', 'Prestidigitação', 'Ferramentas: kit de disfarce, kit de falsificação'],
@@ -205,8 +250,8 @@ antecedentes.push(new antecedente(
 		'Sou muito ganancioso para o meu próprio bem. Não resisto em correr riscos quando há dinheiro envolvido.',
 		'Eu não resisto em golpear pessoas mais poderosas do que eu.',
 		'Eu odeio admitir e odiarei a mim mesmo por isso, mas eu vou correr para proteger minha pele se as coisas ficarem difíceis.']
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'CRIMINOSO',
 	'Você é um criminoso experiente com um histórico de contravenções. Você gastou um bom tempo entre outros criminosos e ainda mantém contato com eles e com o submundo do crime. Você está mais perto do que a maioria do submundo do assassinato, roubo e violência que prevalece no ventre da sociedade, e você sobreviveu até esse ponto desprezando a lei e os regulamentos da sociedade.',
 	['Enganação', 'Furtividade', 'Ferramentas: Um tipo de kit de jogo, ferramentas de ladrão'],
@@ -254,8 +299,8 @@ antecedentes.push(new antecedente(
 		'Eu tenho um "tique" que revela se estou mentindo.',
 		'Eu viro as costas e corro quando as coisas começam a ficar ruins.',
 		'Um inocente foi preso por um crime que eu cometi. Por mim tudo bem.'],
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'EREMITA',
 	[
 		'Você viveu em reclusão – ou em uma comunidade protegida como um mosteiro, ou totalmente sozinho – por uma parte importante de sua vida.',
@@ -320,8 +365,8 @@ antecedentes.push(new antecedente(
 		'Eu arrisco muito para descobrir um pedacinho do conhecimento perdido.',
 		'Eu gosto de guardar segredos e não os compartilho com ninguém.'
 	]
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'FORASTEIRO',
 	'Você cresceu nos ermos, longe da civilização e do conforto da cidade e da tecnologia. Você já testemunhou a migração de rebanhos maiores que florestas, sobreviveu a climas mais extremos do que qualquer morador de cidade possa imaginar e gostou da solidão de ser a única criatura pensante por quilômetros em qualquer direção. Os ermos estão no seu sangue, como se você fosse um nômade, um explorador, um recluso, um caçadorcoletor, ou mesmo um saqueador. Mesmo nos lugares onde você não conhece as características específicas do terreno, você conhece os caminhos do mundo selvagem.',
 	['Atletismo', 'Sobrevivência', 'Ferramentas: Um tipo de instrumento musical'],
@@ -380,8 +425,8 @@ antecedentes.push(new antecedente(
 		'Não espere que eu salve aqueles que não podem se salvar. É o caminho da natureza que o mais forte prospere e o mais fraco pereça.'
 	]
 
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'HERÓI DO POVO',
 	'Você veio de uma parcela humilde da sociedade, mas está destinado a muito mais. O povo de sua vila já o reconhece como campeão, e seu destino conduz você a batalhas contra tiranos e monstros que ameaçam o povo aonde quer que você vá.',
 	['Adestrar Animais', 'Sobrevivência', 'Ferramentas: Um tipo de ferramentas de artesão', 'veículos(terrestres)'],
@@ -440,8 +485,8 @@ antecedentes.push(new antecedente(
 		'Eu tenho dificuldades em confiar em meus aliados.'
 	]
 
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'MARINHEIRO',
 	'Você navegou em uma embarcação por anos. Nesse tempo você enfrentou poderosas tempestades, monstros das profundezas e aqueles que queriam afundar sua embarcação para a profundidade sem fim. Seu primeiro amor é a linha distante do horizonte, mas chegou a hora de tentar algo novo. Discuta a natureza do navio que você navegou anteriormente com seu Mestre. Era um navio mercante, uma embarcação de carga, um navio de descoberta ou um navio pirata ? Quão famoso(ou abominável) você é ? Essa fama é amplamente conhecida ? Você ainda está navegando, ou sente saudades do mar e acha - se perdido ? Quais eram as suas funções a bordo – contramestre, capitão, navegador, cozinheiro, ou outra posição ? Quem era o capitão e o primeiro imediato ? Você deixou o navio de bom grado com seus companheiros, ou fugiu?',
 	['Atletismo', 'Percepção', 'Proficiências em Ferramentas: Ferramentas de navegador', 'veículos(aquático)'],
@@ -488,8 +533,8 @@ antecedentes.push(new antecedente(
 		'Meu orgulho provavelmente vai levar a minha destruição.'
 	]
 
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'MENINO DE RUA',
 	'Você cresceu nas ruas, sozinho, órfão e pobre. Você não tinha ninguém para cuidar e olhar por você, então aprendeu a se virar sozinho. Você lutou ferozmente por alimento e mantinha uma vigília constante nas outras almas desesperadas que poderiam roubá - lo. Você dormia nos telhados e becos, exposto aos elementos, e suportou doenças sem a vantagem de remédios ou lugares de recuperação. Você sobreviveu, apesar de todas as dificuldades, e o fez através da astúcia, força, velocidade, ou uma combinação de cada. Você começa a sua carreira de aventuras com dinheiro suficiente para viver modestamente, mas de forma segura por pelo menos dez dias. Como você conseguiu esse dinheiro ? O que o permitiu a libertar - se das circunstâncias desesperadoras e embarcar em uma vida melhor?',
 	['Prestidigitação', 'Furtividade', 'Proficiências em Ferramentas: Um kit de disfarces', 'ferramentas de ladrão'],
@@ -534,8 +579,8 @@ antecedentes.push(new antecedente(
 		'Pessoas que não conseguem cuidar de si mesmas têm aquilo que merecem.'
 	]
 
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'NOBRE',
 	'Você entende de riqueza, poder e privilégios. Você carrega um título de nobreza, e sua família possui terras, coleta impostos e exerce uma influencia política significativa. Você pode ser um aristocrata mimado pouco familiarizado com o trabalho ou com o desconforto, um ex - comerciante elevado à nobreza, ou um malandro deserdado com um sentido desproporcional de direitos. Ou você pode ser um proprietário de terra honesto e trabalhador que se preocupa profundamente com as pessoas que vivem e trabalham em sua terra, sutilmente ciente da sua responsabilidade para com eles. Converse com seu Mestre para chegar a um título adequado e determinar a quantidade de autoridade este título carrega. Um título de nobreza não fica com você – é conectado a uma família inteira, e qualquer título que você possuir, passará para seus filhos. Você não precisa determinar seu título de nobreza sozinho, você também deve conversar com seu Mestre para descrever sua família e a influencia dela sobre você. Sua família é antiga e estabelecida, ou só recentemente você foi agraciado com seu título ? Qual a influencia que sua família exerce, e sobre qual área ? Que tipo de reputação sua família tem entre os outros aristocratas da região ? Como as pessoas comuns consideram sua família ? Qual é sua posição na família ? Você é herdeiro ou chefe da família ? Você já herdou o título ? Como você se sente sobre essa responsabilidade ? Ou você está tão abaixo da linha de herança que ninguém se importa com o que você faz, contanto que você não envergonhe a família ? Como é que o chefe da família se sente sobre a sua carreira de aventuras ? Você está de bem com a família, ou afastado do restante da família ? Sua família tem um brasão de armas ? Uma insígnia que você pode usar em um anel de sinete ? Cores específicas que você usa o tempo todo ? Um animal que você considera como um símbolo de sua linhagem ou mesmo um membro espiritual da família ? Esses detalhes ajudam a estabelecer sua família e seu título como características do mundo de campanha.',
 	['História', 'Persuasão', 'Proficiências em Ferramentas: Um tipo de kit de jogos'],
@@ -584,8 +629,8 @@ antecedentes.push(new antecedente(
 	]
 
 
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 
 	'SÁBIO',
 	'Você ficou anos aprendendo sobre o conhecimento do multiverso. Você decorou manuscritos, estudou pergaminhos e escutou os grandes especialistas nos temas que o interessam. Seus esforços fizeram de você um mestre no seu campo de estudo.',
@@ -638,8 +683,8 @@ antecedentes.push(new antecedente(
 		'Eu falo sem antes pensar em minhas palavras, invariavelmente insultando outros.',
 		'Eu não consigo guardar um segredo para salvar minha vida. Ou a vida de qualquer outra pessoa.'
 	]
-));
-antecedentes.push(new antecedente(
+),
+new Antecedente(
 	'SOLDADO',
 	'A guerra esteve na sua vida desde que você se recorda. Você foi treinado desde jovem, estudou o uso das armas e armaduras, aprendeu técnicas básicas de sobrevivência, incluindo como permanecer vivo no campo de batalha. Você pode ter feito parte de uma armada nacional, ou uma companhia de mercenários, talvez até mesmo uma milícia local, que cresceu proeminentemente durante uma guerra recente. Quando você escolher esse antecedente, converse com seu Mestre para determinar de qual organização militar você fez parte, quão longe você progrediu na hierarquia e que tipos de experiência você teve na sua carreira militar ? Foi um exército de guarda, uma patrulha de cidade ou a milícia de uma pequena vila ? Ou talvez você tenha participado da defesa pessoal de um nobre, ou mercador, ou de um cartel de mercenários.',
 	['Atletismo', 'Intimidação', 'Ferramentas: Um tipo de kit de jogo', 'veículos(terrestres)'],
@@ -697,36 +742,37 @@ antecedentes.push(new antecedente(
 		'Eu obedeço a lei, mesmo se a lei trouxer a angústia.',
 		'Eu prefiro comer minha armadura a admitir que estou errado'
 	]
-));
+)
+];
 
 /*
  *Raças base
 */
 
-let anao = new raca(
-	'Anão', 
+let anao = new Raca(
+	'Anão',
 	'São Anões, baixinhos e rabugentos',
-	new nomesRacas(
+	new NomesRacas(
 		[
 			'Adrik', 'Alberich', 'Baern', 'Barendd', 'Brottor', 'Bruenor', 'Dain', 'Darrak', 'Delg',
 			'Eberk', 'Einkil', 'Fargrim', 'Flint', 'Gardain', 'Harbek', 'Kildrak', 'Morgran', 'Orsik',
 			'Oskar', 'Rangrim', 'Rurik', 'Taklinn', 'Thoradin', 'Thorin', 'Tordek', 'Traubon',
 			'Travok', 'Ulfgar', 'Veit', 'Vondal'
-		], 
-		[
-			'Amber', 'Artin', 'Audhild','Bardryn', 'Dagnal', 'Diesa', 'Eldeth', 'Falkrunn',
-			'Gunnloda', 'Gurdis', 'Helja', 'Hlin', 'Kathra', 'Kristryd','Ilde', 'Liftrasa', 
-			'Mardred', 'Riswynn', 'Sannl', 'Torbera','Torgga', 'Vistra'
 		],
 		[
-			'Balderk', 'Battlehammer','Brawnanvil', 'Dankil', 'Fireforge', 'Frostbeard',
-			'Gorunn', 'Holderhek', 'Ironfist', 'Loderr', 'Lutgehr','Rumnaheim', 'Strakeln', 
+			'Amber', 'Artin', 'Audhild', 'Bardryn', 'Dagnal', 'Diesa', 'Eldeth', 'Falkrunn',
+			'Gunnloda', 'Gurdis', 'Helja', 'Hlin', 'Kathra', 'Kristryd', 'Ilde', 'Liftrasa',
+			'Mardred', 'Riswynn', 'Sannl', 'Torbera', 'Torgga', 'Vistra'
+		],
+		[
+			'Balderk', 'Battlehammer', 'Brawnanvil', 'Dankil', 'Fireforge', 'Frostbeard',
+			'Gorunn', 'Holderhek', 'Ironfist', 'Loderr', 'Lutgehr', 'Rumnaheim', 'Strakeln',
 			'Torunn', 'Ungart'
 		]
-	), new atributosRaca(0,0,2,0,0,0),
+	), new atributosRaca(0, 0, 2, 0, 0, 0),
 	'Medio',
-	new deslocamento(7.5,'metros')
-	)
+	new Deslocamento(7.5, 'metros')
+)
 
 
 let anaoColina = anao;

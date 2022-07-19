@@ -1,8 +1,8 @@
-class antecedente {
+class Antecedente {
     constructor(
       nome = '', descricao = '', pericias = [], idiomas = [], equipamentos = [],
       caracteristica = '', caracteristicasugerida = '',
-      personalidades = [], ideais = [], vínculos = [], fraquezas = []) {
+      personalidades = [], ideais = [], vinculos = [], fraquezas = []) {
       this.nome = nome;
       this.descricao = descricao;
       this.pericias = pericias;
@@ -12,7 +12,7 @@ class antecedente {
       this.caracteristicasugerida = caracteristicasugerida;
       this.personalidades = personalidades;
       this.ideais = ideais;
-      this.vínculos = vínculos;
+      this.vinculos = vinculos;
       this.fraquezas = fraquezas;
     }
   }

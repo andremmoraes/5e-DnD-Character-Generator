@@ -1,0 +1,156 @@
+class Dados {
+    constructor(lados) {
+      this.lados = lados;
+    }
+  
+    rolagem() {
+      return rolar(this.lados);
+    }
+  
+    static rolar(lados = null) {
+      if (lados <= 0) {
+        lados = 1;
+      }
+  
+      return Math.floor(Math.random() * lados) + 1;
+    }
+  }
+  
+  class D2 extends Dados {
+    constructor() {
+      super(2);
+    }
+  
+    static rolar() {
+      return super.rolar(2);
+    }
+  }
+  
+  class D4 extends Dados {
+    constructor() {
+      super(4);
+    }
+    static rolar() {
+      return super.rolar(4);
+    }
+  }
+  
+  class D6 extends Dados {
+    constructor() {
+      super(6);
+    }
+    static rolar() {
+      return super.rolar(6);
+    }
+  }
+  
+  class D8 extends Dados {
+    constructor() {
+      super(8);
+    }
+    static rolar() {
+      return super.rolar(8);
+    }
+  }
+  
+  class D10 extends Dados {
+    constructor() {
+      super(10);
+    }
+    static rolar() {
+      return super.rolar(10);
+    }
+  }
+  class D12 extends Dados {
+    constructor() {
+      super(12);
+    }
+    static rolar() {
+      return super.rolar(12);
+    }
+  }
+  
+  class D20 extends Dados {
+    constructor() {
+      super(20);
+    }
+    static rolar() {
+      return super.rolar(20);
+    }
+  }
+  
+  class D100 extends Dados {
+    constructor() {
+      super(100);
+    }
+    static rolar() {
+      return super.rolar(100);
+    }
+  }
+  
+  class RolagemAtributos {
+    static RolarAtributo4d6() {
+      let rolagem = [D6.rolar(), D6.rolar(), D6.rolar(), D6.rolar()];
+      let menorValor = Math.min(...rolagem);
+  
+      let soma = rolagem.reduce(function (soma, i) {
+        return soma + i;
+      });
+      
+      return soma - menorValor;
+    }
+  }
+  class Idioma {
+    constructor(nome, exotico = false) {
+      this.nome = nome;
+      this.exotico = exotico;
+    }
+  }
+  
+  let idiomas = [
+    new Idioma('Comum'),
+    new Idioma('Anão'),
+    new Idioma('Élfico'),
+    new Idioma('Gigante'),
+    new Idioma('Gnomo'),
+    new Idioma('Goblin'),
+    new Idioma('Halfling'),
+    new Idioma('Orc'),
+    new Idioma('Abissal', true),
+    new Idioma('Celestial', true),
+    new Idioma('Dracônico', true),
+    new Idioma('Dialeto Subterrâneo', true),
+    new Idioma('Infernal', true),
+    new Idioma('Primordial', true),
+    new Idioma('Silvestre', true),
+    new Idioma('Subterrâneo', true)
+  ];
+  
+  class Moralidade {
+    constructor(nome) {
+      this.nome = nome;
+      this.carctere = nome[0];
+    }
+  }
+  
+  class Lealdade {
+    constructor(nome) {
+      this.nome = nome;
+      this.carctere = nome[0];
+    }
+  }
+  
+  class Tendencia {
+    constructor(lealdade, moralidade, descricao) {
+      this.descricao = descricao;
+      this.moralidade = moralidade;
+      this.lealdade = lealdade;
+      this.nome = lealdade.nome + " e " + moralidade.nome;
+      this.sigla = lealdade.carctere + moralidade.carctere;
+    }
+  
+  }
+  
+  class Nivel{
+    constructor(nivel, proficiencia, caracteristicas){}
+  }

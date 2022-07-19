@@ -26,6 +26,7 @@ class atributo {
       }
     }
   }
+  
   class _forca extends atributo {
     constructor(valor) {
       super("Força", "Força, mede o poder físico", "FOR", valor)
