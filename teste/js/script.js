@@ -1,6 +1,21 @@
-let person = new Personagem
+let person;
+function carregaPersonagem()
+{
+    let e = document.getElementById("antecedente-select");
+    let idAntecedente = e.value;
+    e = document.getElementById("raca-select");
+    let idRaca = e.value;
+    e = document.getElementById("classe-select");
+    let idClasse = e.value;
+    e = document.getElementById("tendencia-select");
+    let idtendencia = e.value;
+    e = document.getElementById("nivel-select");
+    let idnivel = e.value;
+
+
+    person = new Personagem
     (
-        racas[0],
+        racas[idRaca],
         null,
         new atributos
             (
@@ -11,26 +26,41 @@ let person = new Personagem
                 RolagemAtributos.RolarAtributo4d6(),
                 RolagemAtributos.RolarAtributo4d6()
             ),
-        antecedentes[10],
-        1
+        antecedentes[idAntecedente],
+        idnivel,
+        tendencias[idtendencia]
     );
+}
     
 function carregaPagina()
 {
-    const antecedenteSelect = document.getElementById("antecedente-select");
-    antecedentes.forEach((antecedente) => {
-        option = new Option(antecedente.nome,antecedenteSelect.options.length-1);
-        antecedenteSelect.options[antecedenteSelect.options.length] = option;
+    const racaSelect = document.getElementById("raca-select");
+    racas.forEach((raca) => {
+        option = new Option(raca.nome,racaSelect.options.length-1);
+        racaSelect.options[racaSelect.options.length] = option;
       });
 
+      const antecedenteSelect = document.getElementById("antecedente-select");
+      antecedentes.forEach((antecedente) => {
+          option = new Option(antecedente.nome,antecedenteSelect.options.length-1);
+          antecedenteSelect.options[antecedenteSelect.options.length] = option;
+        });
+  
+    const tendenciaSelect = document.getElementById("tendencia-select");
+    tendencias.forEach((tendencia) => {
+        option = new Option(tendencia.nome + '('+tendencia.sigla+')',tendenciaSelect.options.length-1);
+        tendenciaSelect.options[tendenciaSelect.options.length] = option;
+      });
+
+      carregaPersonagem();
 }
 
 function carregarPersonagem() {
-
+    carregaPersonagem();
     //cabeçalho
     document.getElementById("nomepersonagem").value = person.nome;
     document.getElementById("racapersonagem").value = person.raca.nome;
-    document.getElementById("alinhamentopersonagem").value = person.nome;
+    document.getElementById("alinhamentopersonagem").value = person.tendencia.nome;
     document.getElementById("antecedentepersonagem").value = person.antecedente;
 
     document.getElementById("personalidade").value = person.personalidade;

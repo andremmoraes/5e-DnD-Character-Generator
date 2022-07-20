@@ -1,5 +1,5 @@
 class Personagem {
-  constructor(raca, classe, atributos, antecedente, nivel) {
+  constructor(raca, classe, atributos, antecedente, nivel, tendencia) {
     this.raca = raca;
     this.nome = raca.retornarNomeRacaPersonagem('f');
     this.classe = classe;
@@ -10,6 +10,7 @@ class Personagem {
     this.vinculo = antecedente.vinculos[D6.rolar()-1];
     this.fraqueza = antecedente.fraquezas[D6.rolar()-1];
     this.nivel = nivel;
+    this.tendencia =tendencia; 
   }
 }
 

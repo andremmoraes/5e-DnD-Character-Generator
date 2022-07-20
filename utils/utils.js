@@ -107,25 +107,7 @@ class Dados {
     }
   }
   
-  let idiomas = [
-    new Idioma('Comum'),
-    new Idioma('Anão'),
-    new Idioma('Élfico'),
-    new Idioma('Gigante'),
-    new Idioma('Gnomo'),
-    new Idioma('Goblin'),
-    new Idioma('Halfling'),
-    new Idioma('Orc'),
-    new Idioma('Abissal', true),
-    new Idioma('Celestial', true),
-    new Idioma('Dracônico', true),
-    new Idioma('Dialeto Subterrâneo', true),
-    new Idioma('Infernal', true),
-    new Idioma('Primordial', true),
-    new Idioma('Silvestre', true),
-    new Idioma('Subterrâneo', true)
-  ];
-  
+
   class Moralidade {
     constructor(nome) {
       this.nome = nome;
@@ -154,3 +136,12 @@ class Dados {
   class Nivel{
     constructor(nivel, proficiencia, caracteristicas){}
   }
+
+  class Tamanho {
+    constructor(nome = '', descricao = '', bonus = 0, espaco) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.bonus = bonus;
+        this.espaco = espaco;
+    }
+}
