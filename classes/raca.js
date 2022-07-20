@@ -210,7 +210,7 @@ class Halfling extends Raca {
                 ['Cata-Escovas', ' Bom-Barril', 'Garrafa Verde', ' Alta Colina', ' Baixa Colina', ' PratoCheio', ' Folha de Chá', ' Espinhudo', ' Cinto Frouxo', 'Galho Caído']
             ), new atributosRaca(0, 2, 0, 0, 0, 0),
             tamanhos[1],
-            new Deslocamento(7, 5, 'metros'),
+            new Deslocamento(7.5, 'metros'),
             [idiomas[0], idiomas[6]],
             [
                 new VantagemRaca('Sortudo', 'Quando você obtiver um 1 natural em uma jogada de ataque, teste de atributo ou teste de resistência, você pode jogar de novo o dado e deve utilizar o novo resultado.'),

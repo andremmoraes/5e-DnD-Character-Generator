@@ -61,6 +61,8 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
           </select>          
 
           <button onclick="carregarPersonagem()">Gera Personagem</button>
+          <br>
+          <label id="scriptpersonagem"></label>
     </div>
 
     <form id="character-sheet">
@@ -115,7 +117,7 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                             <li>
                                 <input type="checkbox" name="saving-throw-strength-proficiency">
                                 <input type="text" name="saving-throw-strength" placeholder="+0">
-                                <label for="saving-throw-strength">Saving Throws</label>
+                                <label for="saving-throw-strength">Teste de Resistência</label>
                             </li>
 
                             <li>
@@ -138,7 +140,7 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                             <li>
                                 <input type="checkbox" name="saving-throw-dexterity-proficiency">
                                 <input type="text" name="saving-throw-dexterity" placeholder="+0">
-                                <label for="saving-throw-dexterity">Saving Throws</label>
+                                <label for="saving-throw-dexterity">Teste de Resistência</label>
                             </li>
 
                             <li>
@@ -171,7 +173,7 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                             <li>
                                 <input type="checkbox" name="saving-throw-constitution-proficiency">
                                 <input type="text" name="saving-throw-constitution" placeholder="+0">
-                                <label for="saving-throw-constitution">Saving Throws</label>
+                                <label for="saving-throw-constitution">Teste de Resistência</label>
                             </li>
 
                         </ul>
@@ -189,7 +191,7 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                             <li>
                                 <input type="checkbox" name="saving-throw-intelligence-proficiency">
                                 <input type="text" name="saving-throw-intelligence" placeholder="+0">
-                                <label for="saving-throw-intelligence">Saving Throws</label>
+                                <label for="saving-throw-intelligence">Teste de Resistência</label>
                             </li>
 
                             <li>
@@ -232,7 +234,7 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                             <li>
                                 <input type="checkbox" name="saving-throw-wisdom-proficiency">
                                 <input type="text" name="saving-throw-wisdom" placeholder="+0">
-                                <label for="saving-throw-wisdom">Saving Throws</label>
+                                <label for="saving-throw-wisdom">Teste de Resistência</label>
                             </li>
 
                             <li>
@@ -275,7 +277,7 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                             <li>
                                 <input type="checkbox" name="saving-throw-charisma-proficiency">
                                 <input type="text" name="saving-throw-charisma" placeholder="+0">
-                                <label for="saving-throw-charisma">Saving Throws</label>
+                                <label for="saving-throw-charisma">Teste de Resistência</label>
                             </li>
 
                             <li>
@@ -305,38 +307,38 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
 
                 <div class="stat-row">
                     <div id="character-proficiency-bonus" class="box">
-                        <input name="character-proficiency-bonus" placeholder="+2">
-                        <label for="character-proficiency-bonus">Proficiency Bonus</label>
+                        <input name="character-proficiency-bonus" placeholder="+2" id="bonusproficiencia">
+                        <label for="character-proficiency-bonus">Bonus de Proeficiencia</label>
                     </div>
                     <div id="character-inspiration" class="box">
-                        <input name="character-inspiration">
-                        <label for="character-inspiration">Inspiration</label>
+                        <input name="character-inspiration" id="inspiracao">
+                        <label for="character-inspiration">Inspiração</label>
                     </div>
                     <div id="character-perception" class="box">
-                        <input name="character-perception" placeholder="10">
-                        <label for="character-perception">Passive Perception</label>
+                        <input name="character-perception" placeholder="10" id="percepcaopassiva">
+                        <label for="character-perception">Percepção Passiva</label>
                     </div>
                 </div>
 
                 <div id="character-proficiencies-languages" class="box-label">
-                    <textarea name="character-proficiencies-languages" rows="26"></textarea>
-                    <label for="character-proficiencies-languages">Other Proficiencies and Languages</label>
+                    <textarea name="character-proficiencies-languages" rows="26" id="outrasproeficiencias"></textarea>
+                    <label for="character-proficiencies-languages">Outras Proeficiencias e Idiomas</label>
                 </div>
             </div>
 
             <div id="main-column-2" class="main-column">
                 <div id="combat-stats" class="stat-row">
                     <div class="box">
-                        <input name="character-armor-class" placeholder="10">
-                        <label for="character-armor-class">Armor Class</label>
+                        <input name="character-armor-class" placeholder="10" id="classearmadura">
+                        <label for="character-armor-class">Classe de Armadura</label>
                     </div>
                     <div class="box">
-                        <input name="character-initiative" placeholder="+0">
-                        <label for="character-initiative">Initiative</label>
+                        <input name="character-initiative" placeholder="+0" id="iniciativa">
+                        <label for="character-initiative">Iniciativa</label>
                     </div>
                     <div class="box">
-                        <input name="character-speed" placeholder="30">
-                        <label for="character-speed">Speed</label>
+                        <input name="character-speed" placeholder="30" id="deslocamento">
+                        <label for="character-speed">Deslocamento</label>
                     </div>
                 </div>
 
@@ -403,9 +405,9 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                     <table id="attack-list">
                         <thead>
                             <tr>
-                                <th>Name</th>
+                                <th>Arma</th>
                                 <th>Atk Bonus</th>
-                                <th>Atk Damage/Type</th>
+                                <th>Dano/Tipo</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -482,23 +484,23 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
             <div id="main-column-3" class="main-column">
                 <div id="character-personality" class="box-label">
                     <textarea name="character-personality" rows="4" id="personalidade" ></textarea>
-                    <label for="character-personality">Personality</label>
+                    <label for="character-personality">Personalidade</label>
                 </div>
                 <div id="character-ideals" class="box-label">
                     <textarea name="character-ideals" rows="4"id="ideal"></textarea>
-                    <label for="character-ideals">Ideals</label>
+                    <label for="character-ideals">Ideais</label>
                 </div>
                 <div id="character-bonds" class="box-label">
                     <textarea name="character-bonds" rows="4" id="vinculo"></textarea>
-                    <label for="character-bonds">Bonds</label>
+                    <label for="character-bonds">Vinculos</label>
                 </div>
                 <div id="character-flaws" class="box-label">
                     <textarea name="character-flaws" rows="4" id="fraqueza"></textarea>
-                    <label for="character-flaws">Flaws</label>
+                    <label for="character-flaws">Defeitos</label>
                 </div>
                 <div id="character-features" class="box-label">
                     <textarea name="character-features" rows="32"></textarea>
-                    <label for="character-features">Features &amp; Traits</label>
+                    <label for="character-features">Caracteristicas &amp; Traços</label>
                 </div>
             </div>
         </main>

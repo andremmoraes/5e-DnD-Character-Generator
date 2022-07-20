@@ -73,3 +73,28 @@ let tendencias = [
 		'é a tendência de criaturas que agem com violência arbitrária, estimulada por sua ganância, ódio ou sede de sangue. Demônios, dragões vermelhos e orcs são caóticos e malignos'
 	)
 ];
+
+let pericias = [
+	new Pericia('Força','Atletismo'),
+	
+	new Pericia('Destreza','Acrobacia'),
+	new Pericia('Destreza','Furtividade'),
+	new Pericia('Destreza','Prestidigitação'),
+
+	new Pericia('Inteligência','Arcanismo'),
+	new Pericia('Inteligência','História'),
+	new Pericia('Inteligência','Investigação'),
+	new Pericia('Inteligência','Natureza'),
+	new Pericia('Inteligência','Religião'),
+	
+	new Pericia('Sabedoria','Adestrar Animais'),
+	new Pericia('Sabedoria','Intuição'),
+	new Pericia('Sabedoria','Medicina'),
+	new Pericia('Sabedoria','Percepção'),
+	new Pericia('Sabedoria','Sobrevivência'),
+
+	new Pericia('Carisma','Atuação'),
+	new Pericia('Carisma','Enganação'),
+	new Pericia('Carisma','Intimidação'),
+	new Pericia('Carisma','Persuasão')	
+];
