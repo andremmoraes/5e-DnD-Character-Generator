@@ -39,6 +39,8 @@ class Personagem {
     this.resistenciaCar = 0;
 
     this.pericias = pericias;
+
+    this.pontosVida = this.classe.dv.lados + this.atributos.constituicao.modificador;
   }
 }
 

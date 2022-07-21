@@ -75,26 +75,70 @@ let tendencias = [
 ];
 
 let pericias = [
-	new Pericia('Força','Atletismo'),
+	new Pericia('FOR','Atletismo'),
 	
-	new Pericia('Destreza','Acrobacia'),
-	new Pericia('Destreza','Furtividade'),
-	new Pericia('Destreza','Prestidigitação'),
+	new Pericia('DES','Acrobacia'),
+	new Pericia('DES','Furtividade'),
+	new Pericia('DES','Prestidigitação'),
 
-	new Pericia('Inteligência','Arcanismo'),
-	new Pericia('Inteligência','História'),
-	new Pericia('Inteligência','Investigação'),
-	new Pericia('Inteligência','Natureza'),
-	new Pericia('Inteligência','Religião'),
+	new Pericia('INT','Arcanismo'),
+	new Pericia('INT','História'),
+	new Pericia('INT','Investigação'),
+	new Pericia('INT','Natureza'),
+	new Pericia('INT','Religião'),
 	
-	new Pericia('Sabedoria','Adestrar Animais'),
-	new Pericia('Sabedoria','Intuição'),
-	new Pericia('Sabedoria','Medicina'),
-	new Pericia('Sabedoria','Percepção'),
-	new Pericia('Sabedoria','Sobrevivência'),
+	new Pericia('SAB','Adestrar Animais'),
+	new Pericia('SAB','Intuição'),
+	new Pericia('SAB','Medicina'),
+	new Pericia('SAB','Percepção'),
+	new Pericia('SAB','Sobrevivência'),
 
-	new Pericia('Carisma','Atuação'),
-	new Pericia('Carisma','Enganação'),
-	new Pericia('Carisma','Intimidação'),
-	new Pericia('Carisma','Persuasão')	
+	new Pericia('CAR','Atuação'),
+	new Pericia('CAR','Enganação'),
+	new Pericia('CAR','Intimidação'),
+	new Pericia('CAR','Persuasão')	
 ];
+/*
+class Nivel{
+	constructor(
+		nivel=1,
+		proeficiencia=2,
+		caracteristica=[],
+	)
+}
+
+class CaracteristicaClasse{
+}
+
+let niveis = [
+	new Nivel(1,2),
+	new Nivel(2,2),
+	new Nivel(3,2),
+	new Nivel(4,2),
+	new Nivel(5,3),
+	new Nivel(6,3),
+	new Nivel(7,3),
+	new Nivel(8,3),
+	new Nivel(9,4),
+	new Nivel(10,4),
+	new Nivel(11,4),
+	new Nivel(12,4),
+	new Nivel(13,5),
+	new Nivel(14,5),
+	new Nivel(15,5),
+	new Nivel(16,5),
+	new Nivel(17,6),
+	new Nivel(18,6),
+	new Nivel(19,6),
+	new Nivel(20,6)
+];
+
+niveis[0].caracteristica.push([1,2]);
+niveis[0].caracteristica.push([1,2]);
+niveis[0].caracteristica.push([1,2]);
+niveis[0].caracteristica.push([1,2]);
+niveis[0].caracteristica.push([1,2]);
+niveis[0].caracteristica.push([1,2]);
+niveis[0].caracteristica.push([1,2]);
+niveis[0].caracteristica.push([1,2]);
+*/

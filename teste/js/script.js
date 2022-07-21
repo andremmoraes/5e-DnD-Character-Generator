@@ -1,15 +1,16 @@
 let person;
 function carregaPersonagem() {
     let e = document.getElementById("antecedente-select");
-    let idAntecedente = e.value;
+    let idAntecedente = e.value !== '' ? e.value : Math.floor((Math.random() * antecedentes.length) - 1);
+
     e = document.getElementById("raca-select");
-    let idRaca = e.value;
+    let idRaca = e.value !== '' ? e.value : Math.floor((Math.random() * racas.length) - 1);
     e = document.getElementById("classe-select");
-    let idClasse = e.value;
+    let idClasse = e.value !== '' ? e.value : Math.floor((Math.random() * classes.length) - 1);
     e = document.getElementById("tendencia-select");
-    let idtendencia = e.value;
+    let idtendencia = e.value !== '' ? e.value : Math.floor((Math.random() * tendencias.length) - 1);
     e = document.getElementById("nivel-select");
-    let idnivel = e.value;
+    let idnivel = e.value;// !==''? e.value : Math.floor((Math.random() * antecedentes.length) - 1);
 
 
     person = new Personagem
@@ -56,15 +57,19 @@ function carregaPagina() {
         classesSelect.options[classesSelect.options.length] = option;
     });
 
-    
 
-    carregaPersonagem();
+
+    carregarPersonagem();
 }
 
 function carregarPersonagem() {
     carregaPersonagem();
 
-    document.getElementById("scriptpersonagem").innerHTML = person.script;
+    //document.getElementById("scriptpersonagem").innerHTML = person.script;
+
+    document.getElementById("valorpontosdevida").value = person.pontosVida;
+    document.getElementById("dadodevida").value = 'D' + person.classe.dv.lados;
+    
 
     //cabeçalho
     document.getElementById("nomepersonagem").value = person.nome;
@@ -77,7 +82,7 @@ function carregarPersonagem() {
     document.getElementById("vinculo").value = person.vinculo;
     document.getElementById("fraqueza").value = person.fraqueza;
 
-    document.getElementById("classepersonagem").value = person.classe.nome + ', '+person.nivel+'º Nível';
+    document.getElementById("classepersonagem").value = person.classe.nome + ', ' + person.nivel + 'º Nível';
     //    document.getElementById("nivelpersonagem").value = person.nome;
 
     //atributos
@@ -101,6 +106,22 @@ function carregarPersonagem() {
     document.getElementById("modinteligencia").value = person.atributos.inteligencia.modificador;
     document.getElementById("modsabedoria").value = person.atributos.sabedoria.modificador;
     document.getElementById("modcarisma").value = person.atributos.carisma.modificador;
+
+    //Pericias
+
+    document.getElementById('periciasFOR').innerHTML='';
+    document.getElementById('periciasDES').innerHTML='';
+    document.getElementById('periciasINT').innerHTML='';
+    document.getElementById('periciasSAB').innerHTML='';
+    document.getElementById('periciasCAR').innerHTML='';
+
+    pericias.forEach(
+        function (pericia) {
+            let nomeAgrupador = 'pericias' + pericia.atributobase;
+            let item = '<li> <input type="checkbox" name="proeficientepericia' + pericia.nome + '"> <input type="text" name="pericia' + pericia.nome + '" placeholder="+0"> <label for="pericia' + pericia.nome + '">' + pericia.nome + '</label></li>';
+            document.getElementById(nomeAgrupador).innerHTML += item;
+        }
+    )
 
     let deslocamento = person.deslocamento.metros + 'M(' + person.deslocamento.quadrados + ' Q)';
     document.getElementById("deslocamento").value = deslocamento;

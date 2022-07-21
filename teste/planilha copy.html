@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Character Sheet</title>
+    <link rel="stylesheet" href="Character%20Sheet_arquivos/style.css">
+
+    <script src="../utils/utils.js"></script>
+    <script src="../utils/classesgerais.js"></script>
+    <script src="../classes/antecedente.js"></script>
+    <script src="../classes/atributos.js"></script>
+    <script src="../classes/classes.js"></script>
+    <script src="../classes/raca.js"></script>
+    <script src="../utils/atribuicaoclasses.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body onload="carregaPagina()">
+    Alterar a Criação do personagem para randomizar o atributo do meio elfo.
+
+    <div>
+        <select id="raca-select">
+            <option value="" disabled selected>Escolha uma Raça</option>
+        </select>
+
+        <select id="classe-select">
+            <option value="" disabled selected>Escolha uma classe</option>
+        </select>
+
+        <select id="nivel-select">
+            <option value="1" selected>1</option>
+            <option value="2" disabled>2</option>
+            <option value="3" disabled>3</option>
+            <option value="4" disabled>4</option>
+            <option value="5" disabled>5</option>
+            <option value="6" disabled>6</option>
+            <option value="7" disabled>7</option>
+            <option value="8" disabled>8</option>
+            <option value="9" disabled>9</option>
+            <option value="10" disabled>10</option>
+            <option value="11" disabled>11</option>
+            <option value="12" disabled>12</option>
+            <option value="13" disabled>13</option>
+            <option value="14" disabled>14</option>
+            <option value="15" disabled>15</option>
+            <option value="16" disabled>16</option>
+            <option value="17" disabled>17</option>
+            <option value="18" disabled>18</option>
+            <option value="19" disabled>19</option>
+            <option value="20" disabled>20</option>
+        </select>
+
+        <select id="antecedente-select">
+            <option value="" disabled selected>Escolha o Antecedente</option>
+        </select>
+
+        <select id="tendencia-select">
+            <option value="" disabled selected>Escolha a Tendencia</option>
+        </select>
+
+        <button onclick="carregarPersonagem()">Gera Personagem</button>
+        <br>
+        <label id="scriptpersonagem"></label>
+    </div>
+
+    <form id="character-sheet">
+        <header class="box">
+            <div id="character-name">
+                <input name="character-name" id="nomepersonagem">
+                <label for="character-name">Nome do personagem</label>
+            </div>
+
+            <div id="character-classlevel">
+                <input name="character-classlevel" id="classepersonagem">
+                <label for="character-classlevel">Classe &amp; Nível</label>
+            </div>
+
+            <div id="character-background">
+                <input name="character-background" id="antecedentepersonagem">
+                <label for="character-background">Antecedente</label>
+            </div>
+
+            <div id="character-playername">
+                <input name="character-playername">
+                <label for="character-playername">Nome do Jogador</label>
+            </div>
+
+            <div id="character-race">
+                <input name="character-race" id="racapersonagem">
+                <label for="character-race">Raça</label>
+            </div>
+
+            <div id="character-alignment">
+                <input name="character-alignment" id="alinhamentopersonagem">
+                <label for="character-alignment">Alinhamento</label>
+            </div>
+
+            <div id="character-experience">
+                <input name="character-experience">
+                <label for="character-experience">Experiencia</label>
+            </div>
+        </header>
+
+        <main>
+            <div id="main-column-1" class="main-column">
+
+                <div class="ability-score-card">
+                    <div class="ability-score box">
+                        <input name="character-ability-mod-strength" placeholder="+0" id="modforca">
+                        <input name="character-ability-score-strength" placeholder="10" id="forca">
+                        <label for="character-ability-score-strength" id="nomeforca">strength</label>
+                    </div>
+                    <div class="saving-throws">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="saving-throw-strength-proficiency">
+                                <input type="text" name="saving-throw-strength" placeholder="+0">
+                                <label for="saving-throw-strength">Teste de Resistência</label>
+                            </li>
+                            <div id="periciasFOR">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ability-score-card">
+                    <div class="ability-score box">
+                        <input name="character-ability-mod-dexterity" placeholder="+0" id="moddestreza">
+                        <input name="character-ability-score-dexterity" placeholder="10" id="destreza">
+                        <label for="character-ability-score-dexterity" id="nomedestreza">dexterity</label>
+                    </div>
+                    <div class="saving-throws">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="saving-throw-dexterity-proficiency">
+                                <input type="text" name="saving-throw-dexterity" placeholder="+0">
+                                <label for="saving-throw-dexterity">Teste de Resistência</label>
+                            </li>
+
+                            <div id="periciasDES">
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ability-score-card">
+                    <div class="ability-score box">
+                        <input name="character-ability-mod-constitution" placeholder="+0" id="modconstituicao">
+                        <input name="character-ability-score-constitution" placeholder="10" id="constituicao">
+                        <label for="character-ability-score-constitution" id="nomeconstituicao">constitution</label>
+                    </div>
+                    <div class="saving-throws">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="saving-throw-constitution-proficiency">
+                                <input type="text" name="saving-throw-constitution" placeholder="+0">
+                                <label for="saving-throw-constitution">Teste de Resistência</label>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ability-score-card">
+                    <div class="ability-score box">
+                        <input name="character-ability-mod-intelligence" placeholder="+0" id="modinteligencia">
+                        <input name="character-ability-score-intelligence" placeholder="10" id="inteligencia">
+                        <label for="character-ability-score-intelligence" id="nomeinteligencia">intelligence</label>
+                    </div>
+                    <div class="saving-throws">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="saving-throw-intelligence-proficiency">
+                                <input type="text" name="saving-throw-intelligence" placeholder="+0">
+                                <label for="saving-throw-intelligence">Teste de Resistência</label>
+                            </li>
+
+                            <div id="periciasINT">
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ability-score-card">
+                    <div class="ability-score box">
+                        <input name="character-ability-mod-wisdom" placeholder="+0" id="modsabedoria">
+                        <input name="character-ability-score-wisdom" placeholder="10" id="sabedoria">
+                        <label for="character-ability-score-wisdom" id="nomesabedoria">wisdom</label>
+                    </div>
+                    <div class="saving-throws">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="saving-throw-wisdom-proficiency">
+                                <input type="text" name="saving-throw-wisdom" placeholder="+0">
+                                <label for="saving-throw-wisdom">Teste de Resistência</label>
+                            </li>
+                            <div id="periciasSAB">
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ability-score-card">
+                    <div class="ability-score box">
+                        <input name="character-ability-mod-charisma" placeholder="+0" id="modcarisma">
+                        <input name="character-ability-score-charisma" placeholder="10" id="carisma">
+                        <label for="character-ability-score-charisma" id="nomecarisma">charisma</label>
+                    </div>
+                    <div class="saving-throws">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="saving-throw-charisma-proficiency">
+                                <input type="text" name="saving-throw-charisma" placeholder="+0">
+                                <label for="saving-throw-charisma">Teste de Resistência</label>
+                            </li>
+                            <div id="periciasCAR">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="stat-row">
+                    <div id="character-proficiency-bonus" class="box">
+                        <input name="character-proficiency-bonus" placeholder="+2" id="bonusproficiencia">
+                        <label for="character-proficiency-bonus">Bonus de Proeficiencia</label>
+                    </div>
+                    <div id="character-inspiration" class="box">
+                        <input name="character-inspiration" id="inspiracao">
+                        <label for="character-inspiration">Inspiração</label>
+                    </div>
+                    <div id="character-perception" class="box">
+                        <input name="character-perception" placeholder="10" id="percepcaopassiva">
+                        <label for="character-perception">Percepção Passiva</label>
+                    </div>
+                </div>
+
+                <div id="character-proficiencies-languages" class="box-label">
+                    <textarea name="character-proficiencies-languages" rows="26" id="outrasproeficiencias"></textarea>
+                    <label for="character-proficiencies-languages">Outras Proeficiencias e Idiomas</label>
+                </div>
+            </div>
+
+            <div id="main-column-2" class="main-column">
+                <div id="combat-stats" class="stat-row">
+                    <div class="box">
+                        <input name="character-armor-class" placeholder="10" id="classearmadura">
+                        <label for="character-armor-class">Classe de Armadura</label>
+                    </div>
+                    <div class="box">
+                        <input name="character-initiative" placeholder="+0" id="iniciativa">
+                        <label for="character-initiative">Iniciativa</label>
+                    </div>
+                    <div class="box">
+                        <input name="character-speed" placeholder="30" id="deslocamento">
+                        <label for="character-speed">Deslocamento</label>
+                    </div>
+                </div>
+
+                <div id="character-hit-points" class="hit-point box">
+                    <div id="character-hit-point-max">
+                        <label for="character-hit-point-max">Hit Point Maximum</label>
+                        <input name="character-hit-point-max" placeholder="10">
+                    </div>
+                    <div id="character-current-hit-points">
+                        <input name="character-current-hit-points" placeholder="10">
+                        <label for="character-current-hit-points">Current Hit Points</label>
+                    </div>
+                </div>
+
+                <div id="health-stats">
+                    <div id="character-hit-dice" class="hit-point box">
+                        <div id="character-hit-dice-total">
+                            <label for="character-hit-dice-total">Total</label>
+                            <input name="character-hit-dice-total">
+                        </div>
+                        <div id="character-current-hit-dice">
+                            <input name="character-current-hit-dice">
+                            <label for="character-current-hit-dice">Hit Dice</label>
+                        </div>
+                    </div>
+
+                    <div id="character-death-saves" class="box">
+                        <div id="death-saves-successes">
+                            <label for="death-saves-successes">Successes</label>
+                            <div>
+                                <input type="checkbox" name="death-saves-successes-1">
+                                <input type="checkbox" name="death-saves-successes-2">
+                                <input type="checkbox" name="death-saves-successes-3">
+                            </div>
+                        </div>
+                        <div id="death-saves-failures">
+                            <label for="death-saves-failures">Failures</label>
+                            <div>
+                                <input type="checkbox" name="death-saves-failures-1">
+                                <input type="checkbox" name="death-saves-failures-2">
+                                <input type="checkbox" name="death-saves-failures-3">
+                            </div>
+                        </div>
+                        <label for="character-death-saves">Death Saves</label>
+                    </div>
+                </div>
+
+                <div id="spell-stats" class="stat-row">
+                    <div class="box">
+                        <input name="character-spellcasting-ability">
+                        <label for="character-spellcasting-ability">Spellcasting Ability</label>
+                    </div>
+                    <div class="box">
+                        <input name="character-spell-save" placeholder="10">
+                        <label for="character-spell-save">Spell Save DC</label>
+                    </div>
+                    <div class="box">
+                        <input name="character-spell-attack" placeholder="+2">
+                        <label for="character-spell-attack">Spell Attack Bonus</label>
+                    </div>
+                </div>
+
+                <div id="character-attacks" class="box-label">
+                    <table id="attack-list">
+                        <thead>
+                            <tr>
+                                <th>Arma</th>
+                                <th>Atk Bonus</th>
+                                <th>Dano/Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="name-1"></td>
+                                <td><input type="text" name="atk-bonus-1"></td>
+                                <td><input type="text" name="damage-type-1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="name-2"></td>
+                                <td><input type="text" name="atk-bonus-2"></td>
+                                <td><input type="text" name="damage-type-2"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="name-3"></td>
+                                <td><input type="text" name="atk-bonus-3"></td>
+                                <td><input type="text" name="damage-type-3"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="name-4"></td>
+                                <td><input type="text" name="atk-bonus-4"></td>
+                                <td><input type="text" name="damage-type-4"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="name-5"></td>
+                                <td><input type="text" name="atk-bonus-5"></td>
+                                <td><input type="text" name="damage-type-5"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="name-6"></td>
+                                <td><input type="text" name="atk-bonus-6"></td>
+                                <td><input type="text" name="damage-type-6"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="name-7"></td>
+                                <td><input type="text" name="atk-bonus-7"></td>
+                                <td><input type="text" name="damage-type-7"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="name-8"></td>
+                                <td><input type="text" name="atk-bonus-8"></td>
+                                <td><input type="text" name="damage-type-8"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <textarea name="character-attacks-spells" rows="15"></textarea>
+                    <label for="character-attacks">Attacks &amp; Spellcasting</label>
+                </div>
+
+                <div id="character-equipment" class="box-label">
+                    <div id="character-currency">
+                        <div class="currency">
+                            <label for="character-currency-copper">CP</label>
+                            <input name="character-currency-copper">
+                        </div>
+                        <div class="currency">
+                            <label for="character-currency-silver">SP</label>
+                            <input name="character-currency-silver">
+                        </div>
+                        <div class="currency">
+                            <label for="character-currency-gold">GP</label>
+                            <input name="character-currency-gold">
+                        </div>
+                        <div class="currency">
+                            <label for="character-currency-platinum">PP</label>
+                            <input name="character-currency-">
+                        </div>
+                    </div>
+                    <textarea name="character-equipment" rows="15"></textarea>
+                    <label for="character-equipment">Equipment</label>
+                </div>
+            </div>
+
+            <div id="main-column-3" class="main-column">
+                <div id="character-personality" class="box-label">
+                    <textarea name="character-personality" rows="4" id="personalidade"></textarea>
+                    <label for="character-personality">Personalidade</label>
+                </div>
+                <div id="character-ideals" class="box-label">
+                    <textarea name="character-ideals" rows="4" id="ideal"></textarea>
+                    <label for="character-ideals">Ideais</label>
+                </div>
+                <div id="character-bonds" class="box-label">
+                    <textarea name="character-bonds" rows="4" id="vinculo"></textarea>
+                    <label for="character-bonds">Vinculos</label>
+                </div>
+                <div id="character-flaws" class="box-label">
+                    <textarea name="character-flaws" rows="4" id="fraqueza"></textarea>
+                    <label for="character-flaws">Defeitos</label>
+                </div>
+                <div id="character-features" class="box-label">
+                    <textarea name="character-features" rows="32"></textarea>
+                    <label for="character-features">Caracteristicas &amp; Traços</label>
+                </div>
+            </div>
+        </main>
+    </form>
+
+
+</body>
+
+</html>

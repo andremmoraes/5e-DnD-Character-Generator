@@ -18,18 +18,18 @@
 </head>
 
 <body onload="carregaPagina()">
-Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
+    Alterar a Criação do personagem para randomizar o atributo do meio elfo.
 
     <div>
         <select id="raca-select">
             <option value="" disabled selected>Escolha uma Raça</option>
-          </select>
+        </select>
 
-          <select id="classe-select">
+        <select id="classe-select">
             <option value="" disabled selected>Escolha uma classe</option>
-          </select>
+        </select>
 
-          <select id="nivel-select">
+        <select id="nivel-select">
             <option value="1" selected>1</option>
             <option value="2" disabled>2</option>
             <option value="3" disabled>3</option>
@@ -50,25 +50,24 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
             <option value="18" disabled>18</option>
             <option value="19" disabled>19</option>
             <option value="20" disabled>20</option>
-          </select>          
+        </select>
 
-          <select id="antecedente-select">
+        <select id="antecedente-select">
             <option value="" disabled selected>Escolha o Antecedente</option>
-          </select>          
+        </select>
 
-          <select id="tendencia-select">
+        <select id="tendencia-select">
             <option value="" disabled selected>Escolha a Tendencia</option>
-          </select>          
+        </select>
 
-          <button onclick="carregarPersonagem()">Gera Personagem</button>
-          <br>
-          <label id="scriptpersonagem"></label>
+        <button onclick="carregarPersonagem()">Gera Personagem</button>
+        <br>
+        <label id="scriptpersonagem"></label>
     </div>
-
     <form id="character-sheet">
         <header class="box">
             <div id="character-name">
-                <input name="character-name" id="nomepersonagem" >
+                <input name="character-name" id="nomepersonagem">
                 <label for="character-name">Nome do personagem</label>
             </div>
 
@@ -119,12 +118,8 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                                 <input type="text" name="saving-throw-strength" placeholder="+0">
                                 <label for="saving-throw-strength">Teste de Resistência</label>
                             </li>
-
-                            <li>
-                                <input type="checkbox" name="skill-athletics-proficiency">
-                                <input type="text" name="skill-athletics" placeholder="+0">
-                                <label for="skill-athletics">athletics</label>
-                            </li>
+                            <div id="periciasFOR">
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -143,21 +138,9 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                                 <label for="saving-throw-dexterity">Teste de Resistência</label>
                             </li>
 
-                            <li>
-                                <input type="checkbox" name="skill-acrobatics-proficiency">
-                                <input type="text" name="skill-acrobatics" placeholder="+0">
-                                <label for="skill-acrobatics">acrobatics</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-sleight-of-hand-proficiency">
-                                <input type="text" name="skill-sleight-of-hand" placeholder="+0">
-                                <label for="skill-sleight-of-hand">sleight of hand</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-stealth-proficiency">
-                                <input type="text" name="skill-stealth" placeholder="+0">
-                                <label for="skill-stealth">stealth</label>
-                            </li>
+                            <div id="periciasDES">
+                            </div>
+
                         </ul>
                     </div>
                 </div>
@@ -194,31 +177,9 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                                 <label for="saving-throw-intelligence">Teste de Resistência</label>
                             </li>
 
-                            <li>
-                                <input type="checkbox" name="skill-arcana-proficiency">
-                                <input type="text" name="skill-arcana" placeholder="+0">
-                                <label for="skill-arcana">arcana</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-history-proficiency">
-                                <input type="text" name="skill-history" placeholder="+0">
-                                <label for="skill-history">history</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-investigation-proficiency">
-                                <input type="text" name="skill-investigation" placeholder="+0">
-                                <label for="skill-investigation">investigation</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-nature-proficiency">
-                                <input type="text" name="skill-nature" placeholder="+0">
-                                <label for="skill-nature">nature</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-religion-proficiency">
-                                <input type="text" name="skill-religion" placeholder="+0">
-                                <label for="skill-religion">religion</label>
-                            </li>
+                            <div id="periciasINT">
+                            </div>
+
                         </ul>
                     </div>
                 </div>
@@ -236,32 +197,9 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                                 <input type="text" name="saving-throw-wisdom" placeholder="+0">
                                 <label for="saving-throw-wisdom">Teste de Resistência</label>
                             </li>
+                            <div id="periciasSAB">
+                            </div>
 
-                            <li>
-                                <input type="checkbox" name="skill-animal-handling-proficiency">
-                                <input type="text" name="skill-animal-handling" placeholder="+0">
-                                <label for="skill-animal-handling">animal handling</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-insight-proficiency">
-                                <input type="text" name="skill-insight" placeholder="+0">
-                                <label for="skill-insight">insight</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-medicine-proficiency">
-                                <input type="text" name="skill-medicine" placeholder="+0">
-                                <label for="skill-medicine">medicine</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-perception-proficiency">
-                                <input type="text" name="skill-perception" placeholder="+0">
-                                <label for="skill-perception">perception</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-survival-proficiency">
-                                <input type="text" name="skill-survival" placeholder="+0">
-                                <label for="skill-survival">survival</label>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -279,27 +217,8 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                                 <input type="text" name="saving-throw-charisma" placeholder="+0">
                                 <label for="saving-throw-charisma">Teste de Resistência</label>
                             </li>
-
-                            <li>
-                                <input type="checkbox" name="skill-deception-proficiency">
-                                <input type="text" name="skill-deception" placeholder="+0">
-                                <label for="skill-deception">deception</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-intimidation-proficiency">
-                                <input type="text" name="skill-intimidation" placeholder="+0">
-                                <label for="skill-intimidation">intimidation</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-performance-proficiency">
-                                <input type="text" name="skill-performance" placeholder="+0">
-                                <label for="skill-performance">performance</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="skill-persuasion-proficiency">
-                                <input type="text" name="skill-persuasion" placeholder="+0">
-                                <label for="skill-persuasion">persuasion</label>
-                            </li>
+                            <div id="periciasCAR">
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -342,10 +261,40 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                     </div>
                 </div>
 
+                <div id="statusvida" class="stat-row">
+                    <div class="box">
+                        <input name="dadodevida" id="dadodevida">
+                        <label for="character-armor-class">Dado de Vida</label>
+                    </div>
+                    <div class="box">
+                        <input name="character-initiative" placeholder="+0" id="iniciativa">
+                        <label for="character-initiative">Pontos de Vida</label>
+                    </div>
+                    <div class="box">
+                        <div id="death-saves-successes">
+                            <label for="death-saves-successes">Successes</label>
+                            <div>
+                                <input type="checkbox" name="death-saves-successes-1">
+                                <input type="checkbox" name="death-saves-successes-2">
+                                <input type="checkbox" name="death-saves-successes-3">
+                            </div>
+                        </div>
+                        <div id="death-saves-failures">
+                            <label for="death-saves-failures">Failures</label>
+                            <div>
+                                <input type="checkbox" name="death-saves-failures-1">
+                                <input type="checkbox" name="death-saves-failures-2">
+                                <input type="checkbox" name="death-saves-failures-3">
+                            </div>
+                        </div>
+                        <label for="character-death-saves">Death Saves</label>
+                    </div>
+                </div>                
+
                 <div id="character-hit-points" class="hit-point box">
-                    <div id="character-hit-point-max">
-                        <label for="character-hit-point-max">Hit Point Maximum</label>
-                        <input name="character-hit-point-max" placeholder="10">
+                    <div id="pontosdevida">
+                        <label for="pontosdevida">Pontos de Vida</label>
+                        <input name="valorpontosdevida" id="valorpontosdevida" placeholder="10">
                     </div>
                     <div id="character-current-hit-points">
                         <input name="character-current-hit-points" placeholder="10">
@@ -366,23 +315,7 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
                     </div>
 
                     <div id="character-death-saves" class="box">
-                        <div id="death-saves-successes">
-                            <label for="death-saves-successes">Successes</label>
-                            <div>
-                                <input type="checkbox" name="death-saves-successes-1">
-                                <input type="checkbox" name="death-saves-successes-2">
-                                <input type="checkbox" name="death-saves-successes-3">
-                            </div>
-                        </div>
-                        <div id="death-saves-failures">
-                            <label for="death-saves-failures">Failures</label>
-                            <div>
-                                <input type="checkbox" name="death-saves-failures-1">
-                                <input type="checkbox" name="death-saves-failures-2">
-                                <input type="checkbox" name="death-saves-failures-3">
-                            </div>
-                        </div>
-                        <label for="character-death-saves">Death Saves</label>
+
                     </div>
                 </div>
 
@@ -483,11 +416,11 @@ Alterar a Criação do personagem para randomizar  o atributo do meio elfo.
 
             <div id="main-column-3" class="main-column">
                 <div id="character-personality" class="box-label">
-                    <textarea name="character-personality" rows="4" id="personalidade" ></textarea>
+                    <textarea name="character-personality" rows="4" id="personalidade"></textarea>
                     <label for="character-personality">Personalidade</label>
                 </div>
                 <div id="character-ideals" class="box-label">
-                    <textarea name="character-ideals" rows="4"id="ideal"></textarea>
+                    <textarea name="character-ideals" rows="4" id="ideal"></textarea>
                     <label for="character-ideals">Ideais</label>
                 </div>
                 <div id="character-bonds" class="box-label">
