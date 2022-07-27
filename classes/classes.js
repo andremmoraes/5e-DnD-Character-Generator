@@ -41,6 +41,9 @@ class Personagem {
     this.pericias = pericias;
 
     this.pontosVida = this.classe.dv.lados + this.atributos.constituicao.modificador;
+    for (let index = 0; index < this.nivel-1; index++) {
+      this.pontosVida += this.classe.dv.rolar() + this.atributos.constituicao.modificador;
+    }
   }
 }
 

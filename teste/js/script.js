@@ -68,7 +68,7 @@ function carregarPersonagem() {
     //document.getElementById("scriptpersonagem").innerHTML = person.script;
 
     document.getElementById("valorpontosdevida").value = person.pontosVida;
-    document.getElementById("dadodevida").value = 'D' + person.classe.dv.lados;
+    document.getElementById("dadodevida").value = person.nivel + 'D' + person.classe.dv.lados;
     
 
     //cabeçalho
