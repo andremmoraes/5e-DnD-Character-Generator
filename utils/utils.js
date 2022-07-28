@@ -1,10 +1,30 @@
-class Dados {
+/*
+class Dado{
+}
+*/
+
+class Dados{
   constructor(lados) {
     this.lados = lados;
   }
 
-  rolagem() {
-    return rolar(this.lados);
+  rolagem (qtdRolagem = 1)
+  {
+    this.resultados = "[";
+    this.resultadoRolagem = 0;
+    for (let i = 0; i < qtdRolagem; i++) {
+      let res = Dados.rolar(this.lados);
+      
+      if (i!==0){
+        this.resultados +="; ";
+      }
+
+      this.resultados +=res;
+      this.resultadoRolagem += res;
+      
+    }
+    this.resultados +="]";
+    return this.resultadoRolagem;
   }
 
   static rolar(lados = null) {
@@ -13,7 +33,7 @@ class Dados {
     }
 
     return Math.floor(Math.random() * lados) + 1;
-  }
+  }  
 }
 
 class D2 extends Dados {

@@ -1,16 +1,16 @@
 let person;
 function carregaPersonagem() {
     let e = document.getElementById("antecedente-select");
-    let idAntecedente = e.value !== '' ? e.value : Math.floor((Math.random() * antecedentes.length) - 1);
+    let idAntecedente = e.value !== '' ? e.value : Math.floor(Math.random() * (antecedentes.length - 1));
 
     e = document.getElementById("raca-select");
-    let idRaca = e.value !== '' ? e.value : Math.floor((Math.random() * racas.length) - 1);
+    let idRaca = e.value !== '' ? e.value : Math.floor(Math.random() * (racas.length - 1));
     e = document.getElementById("classe-select");
-    let idClasse = e.value !== '' ? e.value : Math.floor((Math.random() * classes.length) - 1);
+    let idClasse = e.value !== '' ? e.value : Math.floor(Math.random() * (classes.length - 1));
     e = document.getElementById("tendencia-select");
-    let idtendencia = e.value !== '' ? e.value : Math.floor((Math.random() * tendencias.length) - 1);
+    let idtendencia = e.value !== '' ? e.value : Math.floor(Math.random() * (tendencias.length - 1));
     e = document.getElementById("nivel-select");
-    let idnivel = e.value;// !==''? e.value : Math.floor((Math.random() * antecedentes.length) - 1);
+    let idnivel = e.value;
 
 
     person = new Personagem
@@ -65,7 +65,7 @@ function carregaPagina() {
 function carregarPersonagem() {
     carregaPersonagem();
 
-    //document.getElementById("scriptpersonagem").innerHTML = person.script;
+    document.getElementById("scriptpersonagem").innerHTML = person.script;
 
     document.getElementById("valorpontosdevida").value = person.pontosVida;
     document.getElementById("dadodevida").value = person.nivel + 'D' + person.classe.dv.lados;
@@ -117,8 +117,19 @@ function carregarPersonagem() {
 
     pericias.forEach(
         function (pericia) {
+            let nomepericia = '';
+            nomepericia = pericia.nome;
+            person.pericias.forEach(
+                function(periciaClasse){
+                    if (periciaClasse.nome === nomepericia)
+                    {
+                        nomepericia = '<b>'+nomepericia+'</b>';
+                        exit;
+                    }
+                }
+            );
             let nomeAgrupador = 'pericias' + pericia.atributobase;
-            let item = '<li> <input type="checkbox" name="proeficientepericia' + pericia.nome + '"> <input type="text" name="pericia' + pericia.nome + '" placeholder="+0"> <label for="pericia' + pericia.nome + '">' + pericia.nome + '</label></li>';
+            let item = '<li> <input type="checkbox" name="proeficientepericia" > <input type="text" name="pericia' + nomepericia + '" placeholder="+0"> <label for="pericia' + pericia.nome + '">' + pericia.nome + '</label></li>';
             document.getElementById(nomeAgrupador).innerHTML += item;
         }
     )

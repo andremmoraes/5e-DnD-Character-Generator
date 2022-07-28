@@ -98,6 +98,8 @@ let pericias = [
 	new Pericia('CAR','Intimidação'),
 	new Pericia('CAR','Persuasão')	
 ];
+
+
 /*
 class Nivel{
 	constructor(
