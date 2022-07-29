@@ -61,6 +61,12 @@
         </select>
 
         <button onclick="carregarPersonagem()">Gera Personagem</button>
+        
+        
+        <input type="checkbox" name="exibir-script-criacao" id="exibir-script-criacao" >
+        <label for="exibir-script-criacao">Mostrar Script de Criação</label>
+
+
         <br>
         <label id="scriptpersonagem"></label>
     </div>
@@ -287,37 +293,10 @@
                                 <input type="checkbox" name="death-saves-failures-3">
                             </div>
                         </div>
-                        <label for="character-death-saves">Death Saves</label>
+                        <label for="character-death-saves">Resist. vida</label>
                     </div>
                 </div>                
 
-                <div id="character-hit-points" class="hit-point box">
-                    <div id="pontosdevida">
-                        <label for="pontosdevida">Pontos de Vida</label>
-                        <input name="valorpontosdevida" id="valorpontosdevida" placeholder="10">
-                    </div>
-                    <div id="character-current-hit-points">
-                        <input name="character-current-hit-points" placeholder="10">
-                        <label for="character-current-hit-points">Current Hit Points</label>
-                    </div>
-                </div>
-
-                <div id="health-stats">
-                    <div id="character-hit-dice" class="hit-point box">
-                        <div id="character-hit-dice-total">
-                            <label for="character-hit-dice-total">Total</label>
-                            <input name="character-hit-dice-total">
-                        </div>
-                        <div id="character-current-hit-dice">
-                            <input name="character-current-hit-dice">
-                            <label for="character-current-hit-dice">Hit Dice</label>
-                        </div>
-                    </div>
-
-                    <div id="character-death-saves" class="box">
-
-                    </div>
-                </div>
 
                 <div id="spell-stats" class="stat-row">
                     <div class="box">

@@ -1,8 +1,8 @@
 class Personagem {
   constructor(raca, classe, atributos, antecedente, nivel, tendencia) {
 
-    this.script = '<br>Inicio do personagem';
-    this.script += '<br>Atributos: ' + atributos.ToString;
+    this.script = 'Inicio do personagem<br>';
+    this.script += atributos.ToString;
     this.atributos = atributos;
     this.script += raca.atributos.ToString;
 
@@ -42,17 +42,17 @@ class Personagem {
 
     this.script += 'Pontos de Vida:<br>';
     this.pontosVida = this.classe.dv.lados + this.atributos.constituicao.modificador;
-    this.script += "1º Nivel(DV+ModCon):" + this.pontosVida + "(" + this.classe.dv.lados + "+" + this.atributos.constituicao.modificador + ")<br>";
+    this.script += "&emsp;1º Nivel&emsp;" + this.pontosVida + "(" + this.classe.dv.lados + "+" + this.atributos.constituicao.modificador + ")<br>";
     let mult = this.nivel - 1;
-    this.script += "Somatoria dos multiplicadores apos o 1º Nivel(ModCon * (nivel-1): " + (mult * this.atributos.constituicao.modificador) + "(" + this.atributos.constituicao.modificador + " * (" + this.nivel + "-1)<br>";
+    this.script += "&emsp;Somatoria dos multiplicadores apos o 1º Nivel(ModCon * (nivel-1):&emsp;" + (mult * this.atributos.constituicao.modificador) + "(" + this.atributos.constituicao.modificador + " * (" + this.nivel + "-1)<br>";
     this.pontosVida += (mult * this.atributos.constituicao.modificador);
     this.classe.dv.rolagem(mult);
     this.pontosVida += this.classe.dv.resultadoRolagem;
-    this.script += "Total da rolagem de 1 DV para cada nivel apos o primeiro: " + this.classe.dv.resultadoRolagem + "(" + this.classe.dv.resultados + ")<br>";
+    this.script += "&emsp;Rolagem de DV para cada nivel apos o primeiro:&emsp;" + this.classe.dv.resultadoRolagem + "(" + this.classe.dv.resultados + ")<br>";
 
     this.resultados;
 
-    //console.log("Tendencia: "+tendencias);
+    console.log((niveis[4]).proeficiencia);
 
     this.mensagemsaida = (this.classe.dv.rolagem(mult));
 

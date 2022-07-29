@@ -65,7 +65,17 @@ function carregaPagina() {
 function carregarPersonagem() {
     carregaPersonagem();
 
-    document.getElementById("scriptpersonagem").innerHTML = person.script;
+    let e = document.getElementById("exibir-script-criacao");
+
+    console.log(e);
+
+    if (e.checked){
+        document.getElementById("scriptpersonagem").innerHTML = person.script;
+    }
+    else{
+        document.getElementById("scriptpersonagem").innerHTML = "";
+    }
+    
 
     document.getElementById("valorpontosdevida").value = person.pontosVida;
     document.getElementById("dadodevida").value = person.nivel + 'D' + person.classe.dv.lados;

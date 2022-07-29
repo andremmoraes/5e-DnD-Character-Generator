@@ -100,17 +100,20 @@ let pericias = [
 ];
 
 
-/*
-class Nivel{
+class NivelClasse{
 	constructor(
 		nivel=1,
 		proeficiencia=2,
 		caracteristica=[],
 	)
+	{ 
+		this.nivel = nivel;
+		this.proeficiencia = proeficiencia;
+		this.caracteristica = caracteristica;
+	}
 }
 
-class CaracteristicaClasse{
-}
+//class CaracteristicaClasse{}
 
 let niveis = [
 	new Nivel(1,2),
@@ -135,12 +138,3 @@ let niveis = [
 	new Nivel(20,6)
 ];
 
-niveis[0].caracteristica.push([1,2]);
-niveis[0].caracteristica.push([1,2]);
-niveis[0].caracteristica.push([1,2]);
-niveis[0].caracteristica.push([1,2]);
-niveis[0].caracteristica.push([1,2]);
-niveis[0].caracteristica.push([1,2]);
-niveis[0].caracteristica.push([1,2]);
-niveis[0].caracteristica.push([1,2]);
-*/

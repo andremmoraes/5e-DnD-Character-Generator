@@ -107,13 +107,14 @@ class atributos {
   }
 
   get ToString() {
-    let atributos = 'Atributos \r';
-    atributos += this.forca.sigla + ': ' + this.forca.valor + '(' + this.forca.modificador + ') - custo ' + this.forca.custo + ',<br>';
-    atributos += this.destreza.sigla + ': ' + this.destreza.valor + '(' + this.destreza.modificador + ') - custo ' + this.destreza.custo + ',<br>';
-    atributos += this.constituicao.sigla + ': ' + this.constituicao.valor + '(' + this.constituicao.modificador + ') - custo ' + this.constituicao.custo + ',<br>';
-    atributos += this.inteligencia.sigla + ': ' + this.inteligencia.valor + '(' + this.inteligencia.modificador + ') - custo ' + this.inteligencia.custo + ',<br>';
-    atributos += this.sabedoria.sigla + ': ' + this.sabedoria.valor + '(' + this.sabedoria.modificador + ') - custo ' + this.sabedoria.custo + ',<br>';
-    atributos += this.carisma.sigla + ': ' + this.carisma.valor + '(' + this.carisma.modificador + ') - custo ' + this.carisma.custo + ',<br>custo total:' + (this.forca.custo + this.destreza.custo + this.constituicao.custo + this.inteligencia.custo + this.sabedoria.custo + this.carisma.custo);
+    let atributos = 'Atributos<br>';
+    atributos += '&emsp;'+this.forca.sigla + ': ' + this.forca.valor + '(' + this.forca.modificador + ') - custo ' + this.forca.custo + ',<br>';
+    atributos += '&emsp;'+this.destreza.sigla + ': ' + this.destreza.valor + '(' + this.destreza.modificador + ') - custo ' + this.destreza.custo + ',<br>';
+    atributos += '&emsp;'+this.constituicao.sigla + ': ' + this.constituicao.valor + '(' + this.constituicao.modificador + ') - custo ' + this.constituicao.custo + ',<br>';
+    atributos += '&emsp;'+this.inteligencia.sigla + ': ' + this.inteligencia.valor + '(' + this.inteligencia.modificador + ') - custo ' + this.inteligencia.custo + ',<br>';
+    atributos += '&emsp;'+this.sabedoria.sigla + ': ' + this.sabedoria.valor + '(' + this.sabedoria.modificador + ') - custo ' + this.sabedoria.custo + ',<br>';
+    atributos += '&emsp;'+this.carisma.sigla + ': ' + this.carisma.valor + '(' + this.carisma.modificador + ') - custo ' + this.carisma.custo + '<br>';
+    atributos += '&emsp;Custo total:' + (this.forca.custo + this.destreza.custo + this.constituicao.custo + this.inteligencia.custo + this.sabedoria.custo + this.carisma.custo);
     return atributos;
   }
 }
@@ -129,12 +130,12 @@ class atributosRaca {
   }
   get ToString() {
     let atributos = '<br>Atributos de Raça<br>';
-    atributos += (this.forca !== 0 ? 'FOR: ' + this.forca + '<br>' : '');
-    atributos += (this.destreza !== 0 ? 'DES: ' + this.destreza + '<br>' : '');
-    atributos += (this.constituicao !== 0 ? 'CON: ' + this.constituicao + '<br>' : '');
-    atributos += (this.inteligencia !== 0 ? 'INT: ' + this.inteligencia + '<br>' : '');
-    atributos += (this.sabedoria !== 0 ? 'SAB: ' + this.sabedoria + '<br>' : '');
-    atributos += (this.carisma !== 0 ? 'CAR: ' + this.carisma : '');
+    atributos += (this.forca !== 0 ? '&emsp;FOR: ' + this.forca + '<br>' : '');
+    atributos += (this.destreza !== 0 ? '&emsp;DES: ' + this.destreza + '<br>' : '');
+    atributos += (this.constituicao !== 0 ? '&emsp;CON: ' + this.constituicao + '<br>' : '');
+    atributos += (this.inteligencia !== 0 ? '&emsp;INT: ' + this.inteligencia + '<br>' : '');
+    atributos += (this.sabedoria !== 0 ? '&emsp;SAB: ' + this.sabedoria + '<br>' : '');
+    atributos += (this.carisma !== 0 ? '&emsp;CAR: ' + this.carisma : '');
 
     return atributos;
   }
