@@ -65,21 +65,39 @@ function carregaPagina() {
 function carregarPersonagem() {
     carregaPersonagem();
 
+    if (person.classe.nome !== 'Mago') {
+        document.getElementById("spell-stats").innerHTML = "";
+    }
+    else
+    {
+        document.getElementById("spell-stats").innerHTML = '<div class="box">'+
+        '<input name="character-spellcasting-ability">'+
+        '<label for="character-spellcasting-ability">Spellcasting Ability</label>'+
+        '</div>'+
+        '<div class="box">'+
+        '<input name="character-spell-save" placeholder="10">'+
+        '<label for="character-spell-save">Spell Save DC</label>'+
+        '</div>'+
+        '<div class="box">'+
+        '<input name="character-spell-attack" placeholder="+2">'+
+        '<label for="character-spell-attack">Spell Attack Bonus</label>'+
+        '</div>';
+    }
     let e = document.getElementById("exibir-script-criacao");
 
-    console.log(e);
+    //console.log(e);
 
-    if (e.checked){
+    if (e.checked) {
         document.getElementById("scriptpersonagem").innerHTML = person.script;
     }
-    else{
+    else {
         document.getElementById("scriptpersonagem").innerHTML = "";
     }
-    
+
 
     document.getElementById("valorpontosdevida").value = person.pontosVida;
     document.getElementById("dadodevida").value = person.nivel + 'D' + person.classe.dv.lados;
-    
+
 
     //cabeçalho
     document.getElementById("nomepersonagem").value = person.nome;
@@ -119,25 +137,33 @@ function carregarPersonagem() {
 
     //Pericias
 
-    document.getElementById('periciasFOR').innerHTML='';
-    document.getElementById('periciasDES').innerHTML='';
-    document.getElementById('periciasINT').innerHTML='';
-    document.getElementById('periciasSAB').innerHTML='';
-    document.getElementById('periciasCAR').innerHTML='';
+    document.getElementById('periciasFOR').innerHTML = '';
+    document.getElementById('periciasDES').innerHTML = '';
+    document.getElementById('periciasINT').innerHTML = '';
+    document.getElementById('periciasSAB').innerHTML = '';
+    document.getElementById('periciasCAR').innerHTML = '';
+
+    //console.log(person.pericias);
+
 
     pericias.forEach(
         function (pericia) {
             let nomepericia = '';
             nomepericia = pericia.nome;
+/* 
             person.pericias.forEach(
-                function(periciaClasse){
-                    if (periciaClasse.nome === nomepericia)
-                    {
-                        nomepericia = '<b>'+nomepericia+'</b>';
+                function (periciaClasse) {
+                    if (periciaClasse.nome === nomepericia) {
+                        nomepericia = '<b>' + nomepericia + '</b>';
                         exit;
                     }
                 }
-            );
+            ); */
+            /*             niveis.forEach(
+                            function(ni){
+                                console.log(ni);
+                            }
+                        ); */
             let nomeAgrupador = 'pericias' + pericia.atributobase;
             let item = '<li> <input type="checkbox" name="proeficientepericia" > <input type="text" name="pericia' + nomepericia + '" placeholder="+0"> <label for="pericia' + pericia.nome + '">' + pericia.nome + '</label></li>';
             document.getElementById(nomeAgrupador).innerHTML += item;

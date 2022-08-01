@@ -74,30 +74,7 @@ let tendencias = [
 	)
 ];
 
-let pericias = [
-	new Pericia('FOR','Atletismo'),
-	
-	new Pericia('DES','Acrobacia'),
-	new Pericia('DES','Furtividade'),
-	new Pericia('DES','Prestidigitação'),
 
-	new Pericia('INT','Arcanismo'),
-	new Pericia('INT','História'),
-	new Pericia('INT','Investigação'),
-	new Pericia('INT','Natureza'),
-	new Pericia('INT','Religião'),
-	
-	new Pericia('SAB','Adestrar Animais'),
-	new Pericia('SAB','Intuição'),
-	new Pericia('SAB','Medicina'),
-	new Pericia('SAB','Percepção'),
-	new Pericia('SAB','Sobrevivência'),
-
-	new Pericia('CAR','Atuação'),
-	new Pericia('CAR','Enganação'),
-	new Pericia('CAR','Intimidação'),
-	new Pericia('CAR','Persuasão')	
-];
 
 
 class NivelClasse{
@@ -116,25 +93,25 @@ class NivelClasse{
 //class CaracteristicaClasse{}
 
 let niveis = [
-	new Nivel(1,2),
-	new Nivel(2,2),
-	new Nivel(3,2),
-	new Nivel(4,2),
-	new Nivel(5,3),
-	new Nivel(6,3),
-	new Nivel(7,3),
-	new Nivel(8,3),
-	new Nivel(9,4),
-	new Nivel(10,4),
-	new Nivel(11,4),
-	new Nivel(12,4),
-	new Nivel(13,5),
-	new Nivel(14,5),
-	new Nivel(15,5),
-	new Nivel(16,5),
-	new Nivel(17,6),
-	new Nivel(18,6),
-	new Nivel(19,6),
-	new Nivel(20,6)
+	new NivelClasse(1,2),
+	new NivelClasse(2,2),
+	new NivelClasse(3,2),
+	new NivelClasse(4,2),
+	new NivelClasse(5,3),
+	new NivelClasse(6,3),
+	new NivelClasse(7,3),
+	new NivelClasse(8,3),
+	new NivelClasse(9,4),
+	new NivelClasse(10,4),
+	new NivelClasse(11,4),
+	new NivelClasse(12,4),
+	new NivelClasse(13,5),
+	new NivelClasse(14,5),
+	new NivelClasse(15,5),
+	new NivelClasse(16,5),
+	new NivelClasse(17,6),
+	new NivelClasse(18,6),
+	new NivelClasse(19,6),
+	new NivelClasse(20,6)
 ];
 

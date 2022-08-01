@@ -160,9 +160,9 @@ class Tendencia {
 
 }
 
-class Nivel {
-  constructor(nivel, proficiencia, caracteristicas) { }
-}
+//class Nivel {
+//  constructor(nivel, proficiencia, caracteristicas) { }
+//}
 
 class Tamanho {
   constructor(nome = '', descricao = '', bonus = 0, espaco) {
@@ -181,4 +181,48 @@ class Pericia {
     this.proeficiente = proeficiente;
   }
 }
+
+class Atletismo extends Pericia{constructor(){super('FOR','Atletismo')}}
+class Acrobacia extends Pericia{constructor(){super('DES','Acrobacia')}}
+class Furtividade extends Pericia{constructor(){super('DES','Furtividade')}}
+class Prestidigitacao extends Pericia{constructor(){super('DES','Prestidigitação')}}
+
+class Arcanismo extends Pericia{constructor(){super('INT','Arcanismo')}}
+class Historia extends Pericia{constructor(){super('INT','História')}}
+class Investigacao extends Pericia{constructor(){super('INT','Investigação')}}
+class Natureza extends Pericia{constructor(){super('INT','Natureza')}}
+class Religiao extends Pericia{constructor(){super('INT','Religião')}}
+	
+class AdestrarAnimais extends Pericia{constructor(){super('SAB','Adestrar Animais')}}
+class Intuicao extends Pericia{constructor(){super('SAB','Intuição')}}
+class Medicina extends Pericia{constructor(){super('SAB','Medicina')}}
+class Percepcao extends Pericia{constructor(){super('SAB','Percepção')}}
+class Sobrevivencia extends Pericia{constructor(){super('SAB','Sobrevivência')}}
+
+class Atuacao extends Pericia{constructor(){super('CAR','Atuação')}}
+class Enganacao extends Pericia{constructor(){super('CAR','Enganação')}}
+class Intimidacao extends Pericia{constructor(){super('CAR','Intimidação')}}
+class Persuasao extends Pericia{constructor(){super('CAR','Persuasão')}}
+
+let atletismo = new Atletismo();
+let acrobacia = new Acrobacia();
+let furtividade = new Furtividade();
+let prestidigitacao = new Prestidigitacao();
+
+let arcanismo = new Arcanismo();
+let historia = new Historia();
+let investigacao = new Investigacao();
+let natureza = new Natureza();
+let religiao = new Religiao();
+	
+let adestrarAnimais = new AdestrarAnimais();
+let intuicao = new Intuicao();
+let medicina = new Medicina();
+let percepcao = new Percepcao();
+let sobrevivencia = new Sobrevivencia();
+
+let atuacao = new Atuacao();
+let enganacao = new Enganacao();
+let intimidacao = new Intimidacao();
+let persuasao = new Persuasao();
 
